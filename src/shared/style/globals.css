@@ -1,0 +1,42 @@
+/* stylelint-disable prettier/prettier */
+@import url('../assets/fonts/fonts.css');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: Bahnschrift, Helvetica, Arial, sans-serif;
+
+  --text-fz: 1.125rem;
+  --text-fw: 400;
+  --text-lh: 1.111;
+  --text-color: var(--mantine-color-black);
+
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --text-fz: 1rem;
+  --text-fw: 400;
+  --text-lh: 1.25;
+  --text-color: var(--mantine-color-quaternaryDynamic-5);
+  --body-color: var(--mantine-color-black);
+}
+
+body {
+  background-color: #606672;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
