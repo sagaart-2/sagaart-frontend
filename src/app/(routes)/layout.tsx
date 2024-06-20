@@ -33,7 +33,12 @@ export default function RootLayout({
           <Container mih="100vh" miw={1024} maw={1440} p={0}>
             <Stack gap={0} h="100%" mih="100vh">
               <Header />
-              <Stack component="main" px={{ base: 64, xxl: 88 }} gap={0}>
+              <Stack
+                component="main"
+                px={{ base: 64, xxl: 88 }}
+                py={88}
+                gap={0}
+              >
                 {children}
               </Stack>
               <Footer />

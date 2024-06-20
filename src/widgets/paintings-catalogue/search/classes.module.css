@@ -1,0 +1,6 @@
+.searchBar {
+  height: 64px;
+  padding: 12px;
+  gap: 12px;
+  background-color: var(--mantine-color-rangeGrey-2);
+}

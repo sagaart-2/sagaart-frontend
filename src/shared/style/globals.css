@@ -31,12 +31,11 @@ html {
   --text-fw: 400;
   --text-lh: 1.25;
   --text-color: var(--mantine-color-quaternaryDynamic-5);
-  --body-color: var(--mantine-color-black);
+  --body-color: var(--mantine-color-white);
 }
 
 body {
-  background-color: #606672;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }

@@ -11,7 +11,7 @@ import Link from 'next/link';
 const navLinks = [
   {
     name: 'Картины',
-    link: '#',
+    link: 'paintings',
   },
   {
     name: 'Выставки',
