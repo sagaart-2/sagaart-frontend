@@ -36,7 +36,7 @@ const navLinks = [
   },
   {
     name: 'Оценить\u00a0картину',
-    link: '#',
+    link: '/cost-estimate',
   },
   {
     name: 'Купить',
