@@ -1,3 +1,5 @@
+'use client';
+
 import { Stack } from '@mantine/core';
 
 import { SearchWidget } from './search';

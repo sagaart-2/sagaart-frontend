@@ -1,24 +1,16 @@
-import { Flex } from '@mantine/core';
-
+import { Grid, GridCol } from '@mantine/core';
+import classes from './classes.module.css';
 import { ItemCard } from '../item-card';
 
 export function ItemsListWidget({ items }: any) {
   return (
-    <Flex
-      component="ul"
-      justify="flex-start"
-      align="flex-start"
-      direction="row"
-      wrap="wrap"
-      gap={20}
-      style={{ listStyle: 'none' }}
-    >
+    <Grid className={classes.grid}>
       {items?.[0] &&
         items.map((item) => (
-          <li key={item.id}>
+          <GridCol span="content" className={classes.grid} key={item.id}>
             <ItemCard item={item} />
-          </li>
+          </GridCol>
         ))}
-    </Flex>
+    </Grid>
   );
 }
