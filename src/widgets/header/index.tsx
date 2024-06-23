@@ -32,7 +32,7 @@ const navLinks = [
   },
   {
     name: 'Анализ\u00a0стоимости',
-    link: '#',
+    link: '/subscription',
   },
   {
     name: 'Оценить\u00a0картину',
