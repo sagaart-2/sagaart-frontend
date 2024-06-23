@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   FavoriteIcon,
   PersonIcon,
@@ -5,8 +6,8 @@ import {
   SearchIcon,
   ShoppingBagIcon,
 } from '@/shared/ui/icons';
-import { Box, Flex, Group, Stack, Text, Title } from '@mantine/core';
-import Link from 'next/link';
+import { Box, Flex, Group, Stack, Text } from '@mantine/core';
+import classes from './classes.module.css';
 
 const navLinks = [
   {
@@ -30,7 +31,7 @@ const navLinks = [
     link: '#',
   },
   {
-    name: 'Анализ\u00a0стоимости\u00a0картины',
+    name: 'Анализ\u00a0стоимости',
     link: '#',
   },
   {
@@ -66,12 +67,12 @@ const navLinks = [
 export function Header() {
   return (
     <Stack
-      justify="space-between"
       bg="tintBlack"
       mih={100}
       gap={10}
       py={10}
       px={{ base: 64, xxl: 88 }}
+      className={classes.header}
     >
       <Group justify="space-between">
         <Group gap={20} miw={204}>
@@ -81,14 +82,17 @@ export function Header() {
             +7 945 800 700 200
           </Text>
         </Group>
-        <Title
-          order={4}
+        <Text
+          component={Link}
+          href="/"
+          fz={24}
+          lh="40px"
           c="var(--mantine-color-white)"
           ta="center"
           ff="Benzin, Helvetica, Arial, sans-serif"
         >
           SAGAART GALLERY
-        </Title>
+        </Text>
         <Group justify="flex-end" miw={204} gap={12}>
           <SearchIcon color="var(--mantine-color-white)" mr={28} />
           <FavoriteIcon color="var(--mantine-color-white)" />
@@ -98,19 +102,26 @@ export function Header() {
       </Group>
       <Flex
         component="ul"
-        justify="center"
-        columnGap={12}
+        justify={{ base: 'center', xxxl: 'space-between' }}
+        columnGap={{ base: 12, xxxl: 6 }}
         rowGap={4}
         direction="row"
         maw="100%"
         style={{
+          padding: 0,
           listStyle: 'none',
           flexWrap: 'wrap',
         }}
       >
         {navLinks.map(({ name, link }) => (
           <Box component="li" key={name}>
-            <Text component={Link} href={link} c="var(--mantine-color-white)">
+            <Text
+              component={Link}
+              href={link}
+              c="var(--mantine-color-white)"
+              fz={16}
+              lh={1.25}
+            >
               {name}
             </Text>
           </Box>
