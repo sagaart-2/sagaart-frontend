@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import NextImage from 'next/image';
-
 import { Stack, Text, Image } from '@mantine/core';
-
 import { FavoriteIcon, ShoppingBagIcon } from '@/shared/ui/icons';
-
 import classes from './classes.module.css';
 
 export function ItemCard({ item }: any) {

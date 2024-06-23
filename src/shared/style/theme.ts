@@ -6,9 +6,10 @@ import {
   colorsTuple,
   MantineColorsTuple,
   Button,
+  Select,
 } from '@mantine/core';
 
-import { buttonResolver } from './variable-resolvers';
+import { buttonResolver, selectResolver } from './variable-resolvers';
 
 const breakpoints: MantineBreakpointsValues = {
   // 374px
@@ -59,7 +60,7 @@ const rangeGrey: MantineColorsTuple = [
   '#F9FAFB',
   '#707070',
   '#CAC6BA',
-  '#CAC6BA',
+  '#797981',
   '#CAC6BA',
   '#CAC6BA',
   '#CAC6BA',
@@ -71,7 +72,7 @@ export const theme = createTheme({
     fontWeight: '400',
     sizes: {
       h1: {
-        fontSize: '100px',
+        fontSize: '60px',
         lineHeight: '90px',
       },
       h2: {
@@ -97,6 +98,7 @@ export const theme = createTheme({
     tintGrey02: colorsTuple('#F9FAFB'),
     tintGrey03: colorsTuple('#707070'),
     tintGrey04: colorsTuple('#CAC6BA'),
+    tintGrey05: colorsTuple('#797981'),
     tintRed: colorsTuple('#FF0200'),
     tintBlue: colorsTuple('#3266CC'),
     rangeWhite,
@@ -107,6 +109,9 @@ export const theme = createTheme({
   components: {
     Button: Button.extend({
       vars: buttonResolver,
+    }),
+    Select: Select.extend({
+      vars: selectResolver,
     }),
   },
 });

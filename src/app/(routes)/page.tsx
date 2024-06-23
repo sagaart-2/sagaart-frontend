@@ -1,9 +1,5 @@
-import { Text } from '@mantine/core';
+import { HomePage } from '@/views/home-page';
 
-export default function Home() {
-  return (
-    <Text c="tintWhite" ta="center" mt="100px">
-      Home Page
-    </Text>
-  );
+export default async function HomeRoute() {
+  return <HomePage />;
 }

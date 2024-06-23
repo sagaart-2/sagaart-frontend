@@ -8,7 +8,6 @@ export const buttonResolver = (_theme: MantineTheme, props: ButtonProps) => {
         ' --button-bg': 'var(--mantine-color-rangeBlack-1)',
         '--button-hover-color': 'var(--mantine-color-rangeGrey-3)',
         ' --button-hover': 'var(--mantine-color-rangeGrey-1)',
-        '--button-radius': '0',
       },
     };
   }

@@ -1,34 +1,34 @@
-import { ActionIcon, Box, Group, Stack, Text, Title } from '@mantine/core';
-import {
-  IconBrandOkRu,
-  IconBrandTelegram,
-  IconBrandVk,
-  IconBrandWhatsapp,
-  IconBrandYandex,
-  IconChevronUp,
-} from '@tabler/icons-react';
 import Link from 'next/link';
+import { ActionIcon, Box, Group, Stack, Text } from '@mantine/core';
+import { IconChevronUp } from '@tabler/icons-react';
+import {
+  VkIcon,
+  ViberIcon,
+  TelegramIcon,
+  WhatsappIcon,
+  YandexZenIcon,
+} from '@/shared/ui/icons';
 
 const socialLinks = [
   {
-    icon: IconBrandTelegram,
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    icon: VkIcon,
+    url: '#',
   },
   {
-    icon: IconBrandWhatsapp,
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    icon: TelegramIcon,
+    url: '#',
   },
   {
-    icon: IconBrandOkRu,
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    icon: ViberIcon,
+    url: '#',
   },
   {
-    icon: IconBrandYandex,
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    icon: WhatsappIcon,
+    url: '#',
   },
   {
-    icon: IconBrandVk,
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    icon: YandexZenIcon,
+    url: '#',
   },
 ];
 
@@ -93,18 +93,21 @@ export function Footer() {
             pr={{ base: 0, xxl: 100 }}
           >
             <Stack gap={32} w={320} align="flex-start">
-              <Title
-                order={4}
-                c="tintWhite"
+              <Text
+                component={Link}
+                href="/"
+                fz={24}
+                lh="40px"
+                c="var(--mantine-color-white)"
                 ff="Benzin, Helvetica, Arial, sans-serif"
               >
                 SAGAART&nbsp;GALLERY
-              </Title>
+              </Text>
               <Group
                 component="ul"
                 gap={24}
                 wrap="nowrap"
-                style={{ listStyle: 'none' }}
+                style={{ listStyle: 'none', padding: 0 }}
               >
                 {socialLinks.map(({ icon: Icon, url }) => (
                   <Box component="li" key={Icon.toString()}>
@@ -137,7 +140,7 @@ export function Footer() {
                   gap={16}
                   component="ul"
                   key={`${index.toString}${column[0].name}`}
-                  style={{ listStyle: 'none' }}
+                  style={{ listStyle: 'none', padding: 0 }}
                 >
                   {column.map(({ name, link }) => (
                     <Box component="li" key={name}>
@@ -167,7 +170,12 @@ export function Footer() {
           bg="tintGrey03"
           radius={0}
           mr={{ base: 0, xxl: '1.5rem' }}
-          style={{ position: 'fixed', bottom: '2rem', right: '4rem' }}
+          style={{
+            display: 'none',
+            position: 'fixed',
+            bottom: '2rem',
+            right: '4rem',
+          }}
         >
           <IconChevronUp color="var(--mantine-color-rangeWhite-1)" />
         </ActionIcon>
