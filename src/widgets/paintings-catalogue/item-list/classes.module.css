@@ -1,6 +1,12 @@
 .grid {
-  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  columns: 4;
+  gap: 32px 20px;
+}
 
-  /* grid-template-columns: repeat(4, 301px); */
-  grid-template-rows: auto;
+.gridCol {
+  width: 301px;
+  break-inside: avoid;
+  padding: 0;
 }

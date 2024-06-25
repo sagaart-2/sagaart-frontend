@@ -1,5 +1,6 @@
 .card {
-  background-color: var(--mantine-color-rangeGrey-2);
+  width: 100%;
+  padding: 0 0 32px;
 }
 
 .cardImage {
@@ -8,4 +9,11 @@
   object-fit: cover;
   object-position: center;
   position: relative;
+}
+
+.title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
 }
