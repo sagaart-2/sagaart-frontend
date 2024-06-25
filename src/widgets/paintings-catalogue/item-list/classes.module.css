@@ -6,7 +6,8 @@
 }
 
 .gridCol {
-  width: 301px;
+  width: calc(320px + (1024 - 320) * ((100vw - 320px) / (1280 - 320)));
+  max-width: 301px;
   break-inside: avoid;
   padding: 0;
 }
