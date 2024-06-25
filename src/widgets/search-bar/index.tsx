@@ -1,3 +1,5 @@
+'use client';
+
 import { PrimaryButton } from '@/shared/ui';
 import { SelectInput } from '@/shared/ui/select-input';
 import { Group } from '@mantine/core';
