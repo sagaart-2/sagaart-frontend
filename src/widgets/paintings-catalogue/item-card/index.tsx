@@ -6,7 +6,7 @@ import classes from './classes.module.css';
 
 export function ItemCard({ item }: any) {
   return (
-    <Stack gap={20} w={301} className={classes.card}>
+    <Stack gap={8} w={301} className={classes.card}>
       <Link
         href={`/paintings/${item.id}`}
         style={{ textDecorationLine: 'none' }}
@@ -20,21 +20,21 @@ export function ItemCard({ item }: any) {
           className={classes.cardImage}
         />
       </Link>
-      <Stack h={148} gap={22}>
-        <Flex justify="space-between">
-          <Flex gap={8} align="center">
+      <Stack mih={148} gap={12}>
+        <Flex justify="space-between" align="center">
+          <Flex gap={8} align="center" h={40}>
             <ShoppingBagIcon />
-            <Text fz={18} lh="20px" ff="Bahnschrift">
-              {' '}
-              {item?.price}
-            </Text>
+            <Text fw={700}>{item?.price} &#8381;</Text>
           </Flex>
           <FavoriteIcon />
         </Flex>
         <Stack gap={8}>
-          <Text> {item?.artist}</Text>
-          <Text> {item?.name}</Text>
-          <Text> {item?.description}</Text>
+          <Text fw={700}> {item?.artist}</Text>
+          <Text fw={700}> {item?.name}</Text>
+          <Text fz={16} lh={1.25} c="tintGrey03">
+            {' '}
+            {item?.description}
+          </Text>
         </Stack>
       </Stack>
     </Stack>
