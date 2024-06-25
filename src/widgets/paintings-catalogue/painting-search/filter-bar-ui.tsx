@@ -39,6 +39,7 @@ export function FilterBarUi() {
           { label: 'Футуризм', value: 'futurism' },
           { label: 'Минимализм', value: 'minimalism' },
           { label: 'Кубизм', value: 'cubism' },
+          { label: 'Сюрреализм', value: 'surrealism' },
           { label: 'Арт Деко', value: 'art-deco' },
         ]}
         placeholder="Стили"
