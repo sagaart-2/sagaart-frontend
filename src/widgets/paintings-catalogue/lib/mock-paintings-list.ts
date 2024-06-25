@@ -37,7 +37,7 @@ export const paintingsList = [
     artist: 'Высоковских А.П.',
     name: 'Осирис',
     description: '30×65 см, холст, масло, 2005 г.',
-    price: '10 000 ₽',
+    price: '10 000',
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const paintingsList = [
     artist: 'Князев И.М',
     name: 'Зима',
     description: '40×30 см, холст, масло, 2006 г.',
-    price: '20 000 ₽',
+    price: '20 000',
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const paintingsList = [
     artist: 'Матис А.,',
     name: 'Лиловый закат',
     description: '42×61 см, бумага, гуашь, 2005 г.',
-    price: '6 000 ₽',
+    price: '6 000',
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const paintingsList = [
     artist: 'Фатеева А.В',
     name: 'Причал в финляндии',
     description: '65×35 см, холст, масло, 2012 г.',
-    price: '7 000 ₽',
+    price: '7 000',
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const paintingsList = [
     artist: 'Скрябин А.В.',
     name: 'Юрьево. Яхтклуб',
     description: '25×40 см, картон, масло, 2010 г.',
-    price: '9 000 ₽',
+    price: '9 000',
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const paintingsList = [
     artist: 'Тахтамышев С. А',
     name: 'Северная деревня',
     description: '75×40 см, холст, масло, 2017 г.',
-    price: '36 000 ₽',
+    price: '36 000',
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const paintingsList = [
     artist: 'Царикович В.В.',
     name: 'Французский завтрак',
     description: '34×100 см, холст, масло, 2013 г.',
-    price: '70 000 ₽',
+    price: '70 000',
   },
   {
     id: 12,
@@ -93,6 +93,6 @@ export const paintingsList = [
     artist: 'Князев И.М',
     name: 'Весенний этюд',
     description: '60×50 см, холст, масло, 2015 г.',
-    price: '34 000 ₽',
+    price: '34 000',
   },
 ];

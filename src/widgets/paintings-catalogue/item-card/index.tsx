@@ -20,11 +20,11 @@ export function ItemCard({ item }: any) {
           className={classes.cardImage}
         />
       </Link>
-      <Stack mih={148} gap={12}>
-        <Flex justify="space-between" p={8} pl={0}>
-          <Flex gap={8} align="center" h={24}>
+      <Stack gap={12}>
+        <Flex justify="space-between" align="center">
+          <Flex gap={8} align="center" h={40}>
             <ShoppingBagIcon />
-            <Text className={classes.title}>{item?.price}</Text>
+            <Text className={classes.title}>{item?.price} &#8381;</Text>
           </Flex>
           <FavoriteIcon />
         </Flex>
@@ -32,7 +32,6 @@ export function ItemCard({ item }: any) {
           <Text className={classes.title}> {item?.artist}</Text>
           <Text className={classes.title}> {item?.name}</Text>
           <Text fz={16} c="tintGrey03">
-            {' '}
             {item?.description}
           </Text>
         </Stack>
