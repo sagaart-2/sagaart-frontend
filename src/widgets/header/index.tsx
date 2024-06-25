@@ -9,6 +9,8 @@ import {
 import { Box, Flex, Group, Stack, Text } from '@mantine/core';
 import classes from './classes.module.css';
 
+const isLogged = true;
+
 const navLinks = [
   {
     name: 'Картины',
@@ -32,7 +34,7 @@ const navLinks = [
   },
   {
     name: 'Анализ\u00a0стоимости',
-    link: '#',
+    link: isLogged ? 'price-analytics' : '/subscription',
   },
   {
     name: 'Оценить\u00a0картину',
