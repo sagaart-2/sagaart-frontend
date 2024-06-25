@@ -20,9 +20,9 @@ export function ItemCard({ item }: any) {
           className={classes.cardImage}
         />
       </Link>
-      <Stack h={148} gap={12}>
-        <Flex justify="space-between" p={8}>
-          <Flex gap={8} align="center">
+      <Stack mih={148} gap={12}>
+        <Flex justify="space-between" p={8} pl={0}>
+          <Flex gap={8} align="center" h={24}>
             <ShoppingBagIcon />
             <Text className={classes.title}>{item?.price}</Text>
           </Flex>
@@ -31,7 +31,7 @@ export function ItemCard({ item }: any) {
         <Stack gap={8}>
           <Text className={classes.title}> {item?.artist}</Text>
           <Text className={classes.title}> {item?.name}</Text>
-          <Text fz={16} c="var(--Secondary-text-03, #707070)">
+          <Text fz={16} c="tintGrey03">
             {' '}
             {item?.description}
           </Text>
