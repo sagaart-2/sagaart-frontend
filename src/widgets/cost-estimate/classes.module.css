@@ -1,0 +1,14 @@
+.rootNativeSelect {
+  height: 40px;
+  background-color: var(--mantine-color-white);
+}
+
+.inputNativeSelect {
+  font-size: 16px;
+  color: var(--mantine-color-rangeBlack-1);
+}
+
+.inputNativeSelect::placeholder {
+  font-size: 16px;
+  color: var(--mantine-color-rangeGrey-5);
+}
