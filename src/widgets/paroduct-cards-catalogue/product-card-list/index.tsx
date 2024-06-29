@@ -1,14 +1,19 @@
+import { type IProductCard } from '@/shared/types';
 import { Grid, GridCol } from '@mantine/core';
+import { ProductCard } from '../product-card';
 import classes from './classes.module.css';
-import { ItemCard } from '../item-card';
 
-export function ItemsListWidget({ items }: any) {
+interface IProps {
+  items: IProductCard[];
+}
+
+export function ProductCardsList({ items }: IProps) {
   return (
     <Grid className={classes.grid} gutter="sm">
       {items?.[0] &&
         items.map((item) => (
           <GridCol span="content" className={classes.gridCol} key={item.id}>
-            <ItemCard item={item} />
+            <ProductCard {...item} />
           </GridCol>
         ))}
     </Grid>

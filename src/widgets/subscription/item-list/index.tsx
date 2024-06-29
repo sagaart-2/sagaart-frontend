@@ -8,7 +8,7 @@ interface IProps {
 
 export function ItemsListPrice({ items }: IProps) {
   return (
-    <Grid gutter={0} justify="">
+    <Grid gutter={0}>
       {items?.[0] &&
         items.map((item, index, arr) => {
           const isLast = arr.length - 1 === index;
