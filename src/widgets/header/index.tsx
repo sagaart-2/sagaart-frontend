@@ -9,7 +9,7 @@ import {
 import { Box, Flex, Group, Stack, Text } from '@mantine/core';
 import classes from './classes.module.css';
 
-const isLogged = true;
+const isLogged = false;
 
 const navLinks = [
   {
