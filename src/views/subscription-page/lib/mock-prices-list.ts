@@ -1,4 +1,6 @@
-export const pricesList = [
+import { ISubscriptionOption } from '@/shared/types';
+
+export const pricesList: ISubscriptionOption[] = [
   {
     id: 1,
     period: '1 мес',

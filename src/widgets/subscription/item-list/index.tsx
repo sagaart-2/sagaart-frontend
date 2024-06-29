@@ -1,15 +1,23 @@
 import { Grid, GridCol } from '@mantine/core';
+import { ISubscriptionOption } from '@/shared/types';
 import { ItemPrice } from '../item-price';
 
-export function ItemsListPrice({ items }: any) {
+interface IProps {
+  items: ISubscriptionOption[];
+}
+
+export function ItemsListPrice({ items }: IProps) {
   return (
-    <Grid gutter="sm" justify="space-around">
+    <Grid gutter={0} justify="">
       {items?.[0] &&
-        items.map((item) => (
-          <GridCol span="content" key={item.id} p={0}>
-            <ItemPrice item={item} />
-          </GridCol>
-        ))}
+        items.map((item, index, arr) => {
+          const isLast = arr.length - 1 === index;
+          return (
+            <GridCol span={3} key={item.id} p={0}>
+              <ItemPrice item={item} isLast={isLast} />
+            </GridCol>
+          );
+        })}
     </Grid>
   );
 }

@@ -1,7 +1,7 @@
 import { Stack, Title, Text, Image, Box } from '@mantine/core';
 import NextImage from 'next/image';
 import { ItemsListPrice } from '@/widgets/subscription/item-list';
-import { pricesList } from '@/widgets/subscription/lib/mock-prices-list';
+import { pricesList } from '@/views/subscription-page/lib/mock-prices-list';
 import Gif from '../../../public/Gif.gif';
 
 export function SubscriptionPage() {
@@ -12,13 +12,13 @@ export function SubscriptionPage() {
           ff="Benzin, Helvetica, Arial, sans-serif"
           fz={20}
           fw={400}
-          c="#707070"
+          c="tintGrey03"
         >
           Рекомендуем оформить подписку
         </Text>
         <Title
           mt={32}
-          mb={8}
+          mb={12}
           order={1}
           fz={48}
           lh={1}
@@ -30,7 +30,7 @@ export function SubscriptionPage() {
           ff="Benzin, Helvetica, Arial, sans-serif"
           fz={20}
           fw={400}
-          c="#707070"
+          c="tintGrey03"
           lh="23px"
         >
           Уникальный алгоритм оценки арт-объектов
@@ -76,7 +76,7 @@ export function SubscriptionPage() {
           >
             Стоимость арт-объекта определяется на основе результатов работы
             авторского алгоритма для анализа больших данных, использующего
-            машинное обучение, и учитывающего 35 критериев оценки арт-объекта и
+            машинное обучение и учитывающего 35 критериев оценки арт-объекта и
             его автора.
           </Text>
           <Text

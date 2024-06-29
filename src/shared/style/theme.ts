@@ -100,7 +100,7 @@ export const theme = createTheme({
     tintGrey04: colorsTuple('#CAC6BA'),
     tintGrey05: colorsTuple('#797981'),
     tintRed: colorsTuple('#FF0200'),
-    tintBlue: colorsTuple('#3266CC'),
+    tintBlue: colorsTuple('#F1F6FF'),
     rangeWhite,
     rangeGrey,
     rangeBlack,
