@@ -2,14 +2,10 @@ import Link from 'next/link';
 import NextImage from 'next/image';
 import { Stack, Text, Image, Flex } from '@mantine/core';
 import { FavoriteIcon, ShoppingBagIcon } from '@/shared/ui/icons';
-import { type IProductCard } from '@/shared/types';
 import { capitalizeWord } from '@/shared/utils';
 import classes from './classes.module.css';
 
-export function ProductCard({ ...item }: IProductCard) {
-  const artworkInfo = `${item?.category.name}${' | '}
-  ${capitalizeWord(item?.style.name)}${' | '}
-  ${item?.genre.name}`;
+export function Slide({ ...item }: any) {
   const artworkParameters = `${capitalizeWord(item?.material_tablet)}, ${item?.material_work.toLowerCase()}${' | '}${item?.width}\u00a0x\u00a0${item?.height}\u00a0см`;
 
   return (
@@ -23,7 +19,7 @@ export function ProductCard({ ...item }: IProductCard) {
           src={item?.foto}
           alt={item?.title}
           width={301}
-          height={360}
+          height={206}
           className={classes.cardImage}
         />
       </Link>
@@ -36,18 +32,10 @@ export function ProductCard({ ...item }: IProductCard) {
           <FavoriteIcon />
         </Flex>
         <Stack gap={8}>
-          <Text fw={700}>
-            {item?.artist.name} {item?.artist.lastname}
-          </Text>
           <Text fw={700}> {item?.title}</Text>
-          <Stack gap={4} pt={4}>
-            <Text fz={16} c="tintGrey03">
-              {artworkInfo}
-            </Text>
-            <Text fz={16} c="tintGrey03">
-              {artworkParameters}
-            </Text>
-          </Stack>
+          <Text fz={16} c="tintGrey03">
+            {artworkParameters}
+          </Text>
         </Stack>
       </Stack>
     </Stack>
