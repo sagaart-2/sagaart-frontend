@@ -1,5 +1,4 @@
-import { PrimaryButton } from '@/shared/ui';
-import { SelectInput } from '@/shared/ui/select-input';
+import { PrimaryButton, SelectInput } from '@/shared/ui';
 import { Group } from '@mantine/core';
 
 export function FilterBarUi() {

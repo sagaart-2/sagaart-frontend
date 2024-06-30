@@ -14,10 +14,9 @@ export function SelectInput({
 }: ISelectInput & React.ComponentPropsWithoutRef<'input'> & SelectProps) {
   return (
     <Select
-      width={194}
       data={data}
       variant="default"
-      size="md"
+      inputSize="md"
       rightSection={
         <IconChevronDown
           style={{ width: rem(36), height: rem(36), paddingRight: rem(8) }}
@@ -26,9 +25,9 @@ export function SelectInput({
       checkIconPosition="right"
       placeholder={placeholder}
       classNames={{
-        dropdown: classes.dropdownSelect,
-        section: classes.sectionSelect,
-        option: classes.optionSelect,
+        dropdown: classes.dropdown,
+        section: classes.section,
+        option: classes.option,
       }}
       comboboxProps={{ offset: 0 }}
       searchable

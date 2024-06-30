@@ -72,20 +72,20 @@ export const theme = createTheme({
     fontWeight: '400',
     sizes: {
       h1: {
-        fontSize: '60px',
-        lineHeight: '90px',
+        fontSize: '48px',
+        lineHeight: '1.25',
       },
       h2: {
-        fontSize: '48px',
-        lineHeight: '44px',
+        fontSize: '34px',
+        lineHeight: '1.18',
       },
       h3: {
-        fontSize: '34px',
-        lineHeight: '40px',
+        fontSize: '24px',
+        lineHeight: '1.6',
       },
       h4: {
-        fontSize: '24px',
-        lineHeight: '40px',
+        fontSize: '20px',
+        lineHeight: '1.15',
       },
     },
   },

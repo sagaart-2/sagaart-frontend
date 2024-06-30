@@ -1,22 +1,35 @@
+export interface IShow {
+  id: number;
+  title: string;
+  place: string;
+  city: string;
+  country: string;
+}
+
 export interface IArtist {
   id: number;
   name: string;
   lastname: string;
+  bio: string;
+  date_of_birth: string;
+  city_of_residence: string;
+  solo_shows: IShow[];
+  group_shows: IShow[];
 }
 
 export interface ICategory {
   id: number;
-  name_category: string;
+  name: string;
 }
 
 export interface IStyle {
   id: number;
-  name_style: string;
+  name: string;
 }
 
 export interface IGenre {
   id: number;
-  name_genre: string;
+  name: string;
 }
 
 export interface IProductCard {

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 
 import { MantineProvider, Stack, Container } from '@mantine/core';
 
+import '@mantine/carousel/styles.css';
 import '@mantine/core/styles.layer.css';
 import '@mantine/core/styles/global.css';
 
