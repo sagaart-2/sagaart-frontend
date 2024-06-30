@@ -9,10 +9,17 @@ interface IProps {
 
 export function ProductCardsList({ items }: IProps) {
   return (
-    <Grid className={classes.grid} gutter="sm">
+    <Grid
+      className={classes.grid}
+      columns={4}
+      styles={{
+        inner: { margin: '0' },
+        root: { '--grid-gutter': '0' },
+      }}
+    >
       {items?.[0] &&
         items.map((item) => (
-          <GridCol span="content" className={classes.gridCol} key={item.id}>
+          <GridCol span={4} className={classes.gridCol} key={item.id}>
             <ProductCard {...item} />
           </GridCol>
         ))}
