@@ -22,7 +22,7 @@ export function ProductCard({ ...item }: IProductCard) {
           component={NextImage}
           src={item?.foto}
           alt={item?.title}
-          width={380}
+          width={301}
           height={360}
           className={classes.cardImage}
         />
