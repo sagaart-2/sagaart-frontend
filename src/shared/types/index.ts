@@ -8,6 +8,7 @@ export interface IShow {
 
 export interface IArtist {
   id: number;
+  foto: string;
   name: string;
   lastname: string;
   bio: string;
