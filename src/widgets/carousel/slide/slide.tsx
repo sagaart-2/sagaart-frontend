@@ -23,7 +23,7 @@ export function Slide({ ...item }: any) {
           className={classes.cardImage}
         />
       </Link>
-      <Stack gap={12}>
+      <Stack gap={4}>
         <Flex justify="space-between" align="center">
           <Flex gap={8} align="center" h={40}>
             <ShoppingBagIcon />
