@@ -16,10 +16,11 @@ export function SearchBarWidget() {
     >
       <SelectInput
         data={[
-          { label: 'Графика', value: 'graphic' },
           { label: 'Живопись', value: 'painting' },
+          { label: 'Графика', value: 'graphic' },
           { label: 'Фото', value: 'photo' },
           { label: 'Digital', value: 'digital' },
+          { label: 'Принты', value: 'print' },
         ]}
         placeholder="Картины"
         styles={{ wrapper: { maxWidth: '194px' } }}

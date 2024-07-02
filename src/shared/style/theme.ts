@@ -7,9 +7,16 @@ import {
   MantineColorsTuple,
   Button,
   Select,
+  TextInput,
+  Textarea,
 } from '@mantine/core';
 
-import { buttonResolver, selectResolver } from './variable-resolvers';
+import {
+  buttonResolver,
+  selectResolver,
+  textInputResolver,
+  textAreaResolver,
+} from './variable-resolvers';
 
 const breakpoints: MantineBreakpointsValues = {
   // 374px
@@ -112,6 +119,12 @@ export const theme = createTheme({
     }),
     Select: Select.extend({
       vars: selectResolver,
+    }),
+    TextInput: TextInput.extend({
+      vars: textInputResolver,
+    }),
+    Textarea: Textarea.extend({
+      vars: textAreaResolver,
     }),
   },
 });

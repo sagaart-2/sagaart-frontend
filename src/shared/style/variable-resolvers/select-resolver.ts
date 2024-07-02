@@ -29,7 +29,7 @@ export const selectResolver: PartialVarsResolver<SelectFactory> = (
         '--input-placeholder-color': 'var(--mantine-color-rangeGrey-5)',
       },
       label: {
-        color: 'var(--mantine-color-black)',
+        color: 'var(--mantine-color-rangeGrey-3)',
       },
     };
 
@@ -41,8 +41,8 @@ export const selectResolver: PartialVarsResolver<SelectFactory> = (
     vars.label = {
       ...vars.label,
       fontSize: rem(16),
-      lineHeight: rem(20),
-      paddingBottom: rem(4),
+      lineHeight: '1',
+      paddingBottom: rem(9),
     };
     return vars;
   }

@@ -1,6 +1,7 @@
 .rootTextInput {
   width: 408px;
   height: 40px;
+  background-color: var(--mantine-color-white);
 }
 
 .inputTextInput {

@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next';
 
 import { MantineProvider, Stack, Container } from '@mantine/core';
 
+import { ModalsProvider } from '@mantine/modals';
+
 import '@mantine/carousel/styles.css';
 import '@mantine/core/styles.layer.css';
 import '@mantine/core/styles/global.css';
@@ -31,20 +33,22 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <MantineProvider theme={theme}>
-          <Container miw={1024} maw={1440} mih="100dvh" mx="auto" p={0}>
-            <Stack gap={0} mih="100%" pos="relative">
-              <Header />
-              <Stack
-                component="main"
-                px={{ base: 64, xxl: 88 }}
-                gap={0}
-                pos="relative"
-              >
-                {children}
+          <ModalsProvider>
+            <Container miw={1024} maw={1440} mih="100dvh" mx="auto" p={0}>
+              <Stack gap={0} mih="100%" pos="relative">
+                <Header />
+                <Stack
+                  component="main"
+                  px={{ base: 64, xxl: 88 }}
+                  gap={0}
+                  pos="relative"
+                >
+                  {children}
+                </Stack>
+                <Footer />
               </Stack>
-              <Footer />
-            </Stack>
-          </Container>
+            </Container>
+          </ModalsProvider>
         </MantineProvider>
       </body>
     </html>
