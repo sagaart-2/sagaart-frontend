@@ -1,7 +1,8 @@
 'use client';
 
 import { Carousel } from '@mantine/carousel';
-import { Slide } from './slide/slide';
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { Slide } from './slide';
 import { paintingsList } from './lib/mock-paintings-list';
 import classes from './classes.module.css';
 
@@ -13,14 +14,21 @@ export function CarouselWidget({ items = paintingsList }: any) {
       slideGap={20}
       align="start"
       slidesToScroll={3}
-      controlsOffset="sm"
-      controlSize={44}
+      controlsOffset={0}
+      controlSize={40}
+      nextControlIcon={<IconChevronRight size={50} />}
+      previousControlIcon={<IconChevronLeft size={50} />}
       classNames={{
         root: classes.rootCarousel,
       }}
       styles={{
-        controls: { top: -50, insetInlineStart: 'auto' },
-        control: { boxShadow: 'none', border: 'none', color: '#707070' },
+        controls: {
+          top: -80,
+          right: -14,
+          insetInlineStart: 'auto',
+          opacity: 0.5,
+        },
+        control: { boxShadow: 'none', border: 'none' },
       }}
     >
       {items.map((item: any) => (
