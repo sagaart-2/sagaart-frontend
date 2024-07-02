@@ -20,7 +20,7 @@ export function ProductCard({ ...item }: IProductCard) {
       >
         <Image
           component={NextImage}
-          src={item?.foto}
+          src={item?.photo}
           alt={item?.title}
           width={301}
           height={360}

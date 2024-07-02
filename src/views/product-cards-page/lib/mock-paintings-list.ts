@@ -3,7 +3,7 @@ import { type IProductCard } from '@/shared/types';
 export const paintingsList: IProductCard[] = [
   {
     id: 1,
-    foto: '/pic_01.jpg',
+    photo: '/pic_01.jpg',
     artist: {
       id: 1,
       name: 'Алексей',
@@ -35,7 +35,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 2,
-    foto: '/pic_02.jpg',
+    photo: '/pic_02.jpg',
     artist: {
       id: 1,
       name: 'Юлий',
@@ -67,7 +67,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 3,
-    foto: '/pic_03.jpg',
+    photo: '/pic_03.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -99,7 +99,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 4,
-    foto: '/pic_04.jpg',
+    photo: '/pic_04.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -131,7 +131,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 5,
-    foto: '/pic_05.jpg',
+    photo: '/pic_05.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -163,7 +163,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 6,
-    foto: '/pic_06.jpg',
+    photo: '/pic_06.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -195,7 +195,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 7,
-    foto: '/pic_07.jpg',
+    photo: '/pic_07.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -227,7 +227,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 8,
-    foto: '/pic_08.jpg',
+    photo: '/pic_08.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -259,7 +259,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 9,
-    foto: '/pic_09.jpg',
+    photo: '/pic_09.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -291,7 +291,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 10,
-    foto: '/pic_10.jpg',
+    photo: '/pic_10.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -323,7 +323,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 11,
-    foto: '/pic_11.jpg',
+    photo: '/pic_11.jpg',
     artist: {
       id: 1,
       name: 'Григорий',
@@ -355,7 +355,7 @@ export const paintingsList: IProductCard[] = [
   },
   {
     id: 12,
-    foto: '/pic_12.jpg',
+    photo: '/pic_12.jpg',
     artist: {
       id: 1,
       name: 'Григорий',

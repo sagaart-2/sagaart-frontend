@@ -26,7 +26,7 @@ export function BidForm() {
             size="md"
             label="Название картины"
             radius={0}
-            styles={{ root: { width: '100%', maxWidth: '440px' } }}
+            styles={{ root: { width: '100%' } }}
           />
           <TextInput
             size="md"

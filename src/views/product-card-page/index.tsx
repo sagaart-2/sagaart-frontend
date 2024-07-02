@@ -28,7 +28,7 @@ interface IProps {
 export function ProductCardPage({ item = productCardsList[0] }: IProps) {
   const [selectedChart, setSelectedChart] = useState('BarChart');
 
-  const artworkInfo = `${item?.category.name}${' | '}
+  const artworkInfo = `${item?.category.name_category}${' | '}
     ${capitalizeWord(item?.style.name)}${' | '}
     ${item?.genre.name}`;
   const artworkParameters = `${capitalizeWord(item?.material_tablet)}, ${item?.material_work.toLowerCase()}${' | '}${item?.width}\u00a0x\u00a0${item?.height}\u00a0см`;
@@ -39,7 +39,7 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
         <Box className={classes.cardImageWrapper}>
           <Image
             component={NextImage}
-            src={item?.foto}
+            src={item?.photo}
             alt={item?.title}
             width={622}
             height={380}
@@ -203,7 +203,7 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
             </Text>
           </Stack>
           <Avatar
-            src={item.artist.foto}
+            src={item.artist.photo}
             alt="фото художника"
             variant="filled"
             radius="50%"

@@ -16,7 +16,7 @@ export function Slide({ ...item }: any) {
       >
         <Image
           component={NextImage}
-          src={item?.foto}
+          src={item?.photo}
           alt={item?.title}
           width={301}
           height={206}

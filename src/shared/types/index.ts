@@ -8,7 +8,7 @@ export interface IShow {
 
 export interface IArtist {
   id: number;
-  foto: string;
+  photo: string;
   name: string;
   lastname: string;
   bio: string;
@@ -20,7 +20,7 @@ export interface IArtist {
 
 export interface ICategory {
   id: number;
-  name: string;
+  name_category: string;
 }
 
 export interface IStyle {
@@ -35,7 +35,7 @@ export interface IGenre {
 
 export interface IProductCard {
   id: number;
-  foto: string;
+  photo: string;
   artist: IArtist;
   title: string;
   category: ICategory;
@@ -67,7 +67,7 @@ export interface IBidRequest {
   group_shows: string;
   age: number;
   is_alive: boolean;
-  foto: string;
+  photo: string;
   title: string;
   artist_name: string;
   artist_lastname: string;
@@ -75,7 +75,7 @@ export interface IBidRequest {
 
 export interface IBidResponse {
   id: number;
-  foto: string;
+  photo: string;
   title: string;
   artist_name: string;
   artist_lastname: string;
