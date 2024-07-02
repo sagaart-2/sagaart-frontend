@@ -14,9 +14,13 @@ export function CarouselWidget({ items = paintingsList }: any) {
       align="start"
       slidesToScroll={3}
       controlsOffset="sm"
-      controlSize={33}
+      controlSize={44}
       classNames={{
         root: classes.rootCarousel,
+      }}
+      styles={{
+        controls: { top: -50, insetInlineStart: 'auto' },
+        control: { boxShadow: 'none', border: 'none', color: '#707070' },
       }}
     >
       {items.map((item: any) => (
