@@ -1,3 +1,5 @@
+'use client';
+
 import NextImage from 'next/image';
 import { IProductCard } from '@/shared/types';
 import {
@@ -13,14 +15,19 @@ import {
 import { CarouselWidget } from '@/widgets/carousel';
 import { OutlineButton, PrimaryButton, SelectInput } from '@/shared/ui';
 import { getYear, capitalizeWord } from '@/shared/utils';
+import { BarChart, DonutChart, LineChart } from '@mantine/charts';
+import React, { useState } from 'react';
 import { productCardsList } from './lib/mock-product-cards-list';
 import classes from './classes.module.css';
+import { country, data, line } from './lib/mock-data';
 
 interface IProps {
   item: IProductCard;
 }
 
 export function ProductCardPage({ item = productCardsList[0] }: IProps) {
+  const [selectedChart, setSelectedChart] = useState('BarChart');
+
   const artworkInfo = `${item?.category.name}${' | '}
     ${capitalizeWord(item?.style.name)}${' | '}
     ${item?.genre.name}`;
@@ -122,16 +129,49 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
         <Text fz={16} c="tintGrey03">
           Стоимостные показатели отражены в конверсионных российских рублях.
         </Text>
-        <Group gap={20} align="flex-start" wrap="nowrap">
-          <Stack gap={16}>
-            <OutlineButton>Динамика изменения цены за пять лет</OutlineButton>
-            <OutlineButton>
+        <Group gap={32} align="flex-start" wrap="nowrap">
+          <Stack gap={20}>
+            <OutlineButton onClick={() => setSelectedChart('BarChart')}>
+              Динамика изменения цены за десять лет
+            </OutlineButton>
+            <OutlineButton onClick={() => setSelectedChart('LineChart')}>
               Зависимость цены от выставочной активности
             </OutlineButton>
-            <OutlineButton>
+            <OutlineButton onClick={() => setSelectedChart('DonutChart')}>
               Зависимость цены от мест проведения выставок
             </OutlineButton>
           </Stack>
+          {selectedChart === 'BarChart' && (
+            <BarChart
+              w="100%"
+              h={320}
+              data={data}
+              dataKey="year"
+              withTooltip={false}
+              series={[{ name: 'value', color: 'tintGrey01' }]}
+              tickLine="y"
+            />
+          )}
+          {selectedChart === 'LineChart' && (
+            <LineChart
+              w="100%"
+              h={320}
+              data={line}
+              dataKey="year"
+              yAxisProps={{ domain: [0, 100] }}
+              series={[{ name: 'price', color: 'indigo.6' }]}
+            />
+          )}
+          {selectedChart === 'DonutChart' && (
+            <DonutChart
+              w="100%"
+              h={300}
+              withLabelsLine
+              withLabels
+              data={country}
+              size={300}
+            />
+          )}
         </Group>
       </Stack>
 
