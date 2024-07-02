@@ -17,9 +17,11 @@ import { OutlineButton, PrimaryButton, SelectInput } from '@/shared/ui';
 import { getYear, capitalizeWord } from '@/shared/utils';
 import { BarChart, DonutChart, LineChart } from '@mantine/charts';
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { productCardsList } from './lib/mock-product-cards-list';
 import classes from './classes.module.css';
 import { country, data, line } from './lib/mock-data';
+import Gif from '../../../public/Gif.gif';
 
 interface IProps {
   item: IProductCard;
@@ -27,6 +29,7 @@ interface IProps {
 
 export function ProductCardPage({ item = productCardsList[0] }: IProps) {
   const [selectedChart, setSelectedChart] = useState('BarChart');
+  const [selectedSubscription] = useState(false);
 
   const artworkInfo = `${item?.category.name}${' | '}
     ${capitalizeWord(item?.style.name)}${' | '}
@@ -114,67 +117,110 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
           </Stack>
         </Stack>
       </Group>
-
       <Stack gap={40} maw={796}>
         <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
           О работе
         </Title>
         <Text>{item.description}</Text>
       </Stack>
-
-      <Stack gap={40}>
-        <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
-          Анализ стоимости
-        </Title>
-        <Text fz={16} c="tintGrey03">
-          Стоимостные показатели отражены в конверсионных российских рублях.
-        </Text>
-        <Group gap={32} align="flex-start" wrap="nowrap">
-          <Stack gap={20}>
-            <OutlineButton onClick={() => setSelectedChart('BarChart')}>
-              Динамика изменения цены за десять лет
-            </OutlineButton>
-            <OutlineButton onClick={() => setSelectedChart('LineChart')}>
-              Зависимость цены от выставочной активности
-            </OutlineButton>
-            <OutlineButton onClick={() => setSelectedChart('DonutChart')}>
-              Зависимость цены от мест проведения выставок
-            </OutlineButton>
-          </Stack>
-          {selectedChart === 'BarChart' && (
-            <BarChart
-              w="100%"
-              h={320}
-              data={data}
-              dataKey="year"
-              withTooltip={false}
-              series={[{ name: 'value', color: 'tintGrey01' }]}
-              tickLine="y"
+      {selectedSubscription === false ? (
+        <Stack gap={0}>
+          <Text
+            ff="Benzin, Helvetica, Arial, sans-serif"
+            fz={20}
+            fw={400}
+            c="tintGrey03"
+          >
+            Рекомендуем оформить подписку
+          </Text>
+          <Title
+            mt={20}
+            mb={12}
+            order={1}
+            fz={30}
+            lh={1}
+            ff="Benzin, Helvetica, Arial, sans-serif"
+          >
+            Оформите подписку на анализ стоимости
+          </Title>
+          <Text
+            ff="Benzin, Helvetica, Arial, sans-serif"
+            fz={20}
+            fw={400}
+            c="tintGrey03"
+            lh="23px"
+          >
+            Уникальный алгоритм оценки арт-объектов
+          </Text>
+          <Link href="/subscription">
+            <Image
+              mt={20}
+              mb={20}
+              component={NextImage}
+              src={Gif}
+              alt="Gif"
+              width={840}
+              height={350}
+              styles={{
+                root: { flex: 'none' },
+              }}
             />
-          )}
-          {selectedChart === 'LineChart' && (
-            <LineChart
-              w="100%"
-              h={320}
-              data={line}
-              dataKey="year"
-              yAxisProps={{ domain: [0, 100] }}
-              series={[{ name: 'price', color: 'indigo.6' }]}
-            />
-          )}
-          {selectedChart === 'DonutChart' && (
-            <DonutChart
-              w="100%"
-              h={300}
-              withLabelsLine
-              withLabels
-              data={country}
-              size={300}
-            />
-          )}
-        </Group>
-      </Stack>
-
+          </Link>
+        </Stack>
+      ) : (
+        <Stack gap={40}>
+          <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
+            Анализ стоимости
+          </Title>
+          <Text fz={16} c="tintGrey03">
+            Стоимостные показатели отражены в конверсионных российских рублях.
+          </Text>
+          <Group gap={32} align="flex-start" wrap="nowrap">
+            <Stack gap={20}>
+              <OutlineButton onClick={() => setSelectedChart('BarChart')}>
+                Динамика изменения цены за пять лет
+              </OutlineButton>
+              <OutlineButton onClick={() => setSelectedChart('LineChart')}>
+                Зависимость цены от выставочной активности
+              </OutlineButton>
+              <OutlineButton onClick={() => setSelectedChart('DonutChart')}>
+                Зависимость цены от мест проведения выставок
+              </OutlineButton>
+            </Stack>
+            {selectedChart === 'BarChart' && (
+              <BarChart
+                w="100%"
+                h={320}
+                data={data}
+                dataKey="year"
+                withTooltip={false}
+                series={[{ name: 'value', color: 'tintGrey01' }]}
+                tickLine="y"
+              />
+            )}
+            {selectedChart === 'LineChart' && (
+              <LineChart
+                w="100%"
+                h={320}
+                data={line}
+                dataKey="year"
+                yAxisProps={{ domain: [0, 100] }}
+                series={[{ name: 'price', color: 'indigo.6' }]}
+              />
+            )}
+            {selectedChart === 'DonutChart' && (
+              <DonutChart
+                w="100%"
+                h={300}
+                withLabelsLine
+                withLabels
+                data={country}
+                size={300}
+              />
+            )}
+          </Group>
+        </Stack>
+      )}
       <Stack gap={40}>
         <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
           О художнике
@@ -211,7 +257,6 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
           />
         </Group>
       </Stack>
-
       <Stack gap={40} maw={796}>
         <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
           Избранные выставки
@@ -263,7 +308,6 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
           </Group>
         </Stack>
       </Stack>
-
       <Stack gap={40}>
         <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
           Другие работы художника
