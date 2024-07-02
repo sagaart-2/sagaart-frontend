@@ -129,10 +129,10 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
         <Text fz={16} c="tintGrey03">
           Стоимостные показатели отражены в конверсионных российских рублях.
         </Text>
-        <Group gap={20} align="flex-start" wrap="nowrap">
-          <Stack gap={16}>
+        <Group gap={32} align="flex-start" wrap="nowrap">
+          <Stack gap={20}>
             <OutlineButton onClick={() => setSelectedChart('BarChart')}>
-              Динамика изменения цены за пять лет
+              Динамика изменения цены за десять лет
             </OutlineButton>
             <OutlineButton onClick={() => setSelectedChart('LineChart')}>
               Зависимость цены от выставочной активности
@@ -143,29 +143,29 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
           </Stack>
           {selectedChart === 'BarChart' && (
             <BarChart
-              w={840}
-              h={350}
+              w="100%"
+              h={320}
               data={data}
               dataKey="year"
               withTooltip={false}
-              series={[{ name: 'value', color: 'tintGrey03' }]}
+              series={[{ name: 'value', color: 'tintGrey01' }]}
               tickLine="y"
             />
           )}
           {selectedChart === 'LineChart' && (
             <LineChart
-              w={840}
-              h={350}
+              w="100%"
+              h={320}
               data={line}
               dataKey="year"
               yAxisProps={{ domain: [0, 100] }}
-              series={[{ name: 'price', color: 'blue' }]}
+              series={[{ name: 'price', color: 'indigo.6' }]}
             />
           )}
           {selectedChart === 'DonutChart' && (
             <DonutChart
-              w={840}
-              h={350}
+              w="100%"
+              h={300}
               withLabelsLine
               withLabels
               data={country}
