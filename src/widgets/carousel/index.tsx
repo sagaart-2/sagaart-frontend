@@ -16,8 +16,8 @@ export function CarouselWidget({ items = paintingsList }: any) {
       slidesToScroll={3}
       controlsOffset={0}
       controlSize={40}
-      nextControlIcon={<IconChevronRight size={50} />}
-      previousControlIcon={<IconChevronLeft size={50} />}
+      nextControlIcon={<IconChevronRight size={44} />}
+      previousControlIcon={<IconChevronLeft size={44} />}
       classNames={{
         root: classes.rootCarousel,
       }}

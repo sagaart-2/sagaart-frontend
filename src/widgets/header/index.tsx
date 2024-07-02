@@ -55,7 +55,7 @@ const navLinks = [
     link: '#',
   },
   {
-    name: 'О\u00a0НАС',
+    name: 'О\u00a0нас',
     link: '#',
   },
   {
