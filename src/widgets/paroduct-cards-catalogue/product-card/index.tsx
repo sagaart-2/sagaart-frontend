@@ -3,7 +3,7 @@ import NextImage from 'next/image';
 import { Stack, Text, Image, Flex } from '@mantine/core';
 import { FavoriteIcon, ShoppingBagIcon } from '@/shared/ui/icons';
 import { type IProductCard } from '@/shared/types';
-import { capitalizeWord } from '@/shared/utils';
+import { capitalizeWord, priceConversion } from '@/shared/utils';
 import classes from './classes.module.css';
 
 export function ProductCard({ ...item }: IProductCard) {
@@ -31,7 +31,7 @@ export function ProductCard({ ...item }: IProductCard) {
         <Flex justify="space-between" align="center">
           <Flex gap={8} align="center" h={40}>
             <ShoppingBagIcon />
-            <Text fw={700}>{item?.price} &#8381;</Text>
+            <Text fw={700}> {priceConversion(item?.price)} &#8381;</Text>
           </Flex>
           <FavoriteIcon />
         </Flex>

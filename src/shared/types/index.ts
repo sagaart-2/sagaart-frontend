@@ -1,5 +1,6 @@
 export interface IShow {
   id: number;
+  year: number;
   title: string;
   place: string;
   city: string;

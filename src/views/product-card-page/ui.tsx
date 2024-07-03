@@ -17,7 +17,7 @@ import {
 } from '@mantine/core';
 import { CarouselWidget } from '@/widgets/carousel';
 import { OutlineButton, PrimaryButton, SelectInput } from '@/shared/ui';
-import { getYear, capitalizeWord } from '@/shared/utils';
+import { getYear, capitalizeWord, priceConversion } from '@/shared/utils';
 import { BarChart, DonutChart, LineChart } from '@mantine/charts';
 import { country, mockData, line } from './lib/mock-data';
 import Gif from '../../../public/Gif.gif';
@@ -31,6 +31,10 @@ export function ProductCardUi({ ...item }: IProductCard) {
     ${capitalizeWord(item?.style.name)}${' | '}
     ${item?.genre}`;
   const artworkParameters = `${capitalizeWord(item?.material_tablet)}, ${item?.material_work.toLowerCase()}${' | '}${item?.width}\u00a0x\u00a0${item?.height}\u00a0см`;
+
+  const soloShowsArr = item.artist.solo_shows;
+  const groupShowsArr = item.artist.group_shows;
+  const allShowsArr = [...soloShowsArr, ...groupShowsArr];
 
   return (
     <Stack gap={88} py={88}>
@@ -98,7 +102,7 @@ export function ProductCardUi({ ...item }: IProductCard) {
               ff="Benzin, Helvetica, Arial, sans-serif"
               py={4}
             >
-              {item.price}
+              {priceConversion(item.price)}
               {'  '}&#8381;
             </Text>
             <PrimaryButton>Купить</PrimaryButton>
@@ -248,13 +252,18 @@ export function ProductCardUi({ ...item }: IProductCard) {
               <Text fz={20} lh={1} c="tintGrey03">
                 {getYear(item?.artist.date_of_birth)}
                 {' | '}
-                {item?.artist.city_of_residence}
+                {item?.artist.city_of_birth}
               </Text>
             </Group>
             <Text>{item.artist.bio}</Text>
-            <Text fz={20} lh={1} c="tintGrey03">
-              Работы этого художника находятся в 7 частных и музейных коллекциях
-            </Text>
+
+            {item.artist.collected_by_major_institutions &&
+              item.artist.collected_by_private_collectors && (
+                <Text fz={20} lh={1} c="tintGrey03">
+                  Работы этого художника находятся в частных и музейных
+                  коллекциях
+                </Text>
+              )}
           </Stack>
           <Avatar
             src={item.artist.photo}
@@ -269,51 +278,31 @@ export function ProductCardUi({ ...item }: IProductCard) {
         <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
           Избранные выставки
         </Title>
-        <Stack gap={20}>
-          <Group gap={32} align="baseline" wrap="nowrap">
-            <Text fz={20} lh={1} fw={600} w={70}>
-              2017
-            </Text>
-            <Text fz={20} lh={1}>
-              ПОЛЯРНОСТИ
-            </Text>
-            <Text fz={18} lh={1} c="tintGrey03">
-              Миллениум{' | '} Ярославль
-            </Text>
-          </Group>
-          <Group gap={32} align="baseline" wrap="nowrap">
-            <Text fz={20} lh={1} fw={600} w={70}>
-              2020
-            </Text>
-            <Text fz={20} lh={1}>
-              ART RUSSIA FAIR
-            </Text>
-            <Text fz={18} lh={1} c="tintGrey03">
-              Елоховская галерея{' | '} Москва
-            </Text>
-          </Group>
-          <Group gap={32} align="baseline" wrap="nowrap">
-            <Text fz={20} lh={1} fw={600} w={70}>
-              2023
-            </Text>
-            <Text fz={20} lh={1}>
-              ЭТНОС
-            </Text>
-            <Text fz={18} lh={1} c="tintGrey03">
-              Гостиный Двор{' | '}Санкт-Петербург
-            </Text>
-          </Group>
-          <Group gap={32} align="baseline" wrap="nowrap">
-            <Text fz={20} lh={1} fw={600} w={70}>
-              2024
-            </Text>
-            <Text fz={20} lh={1}>
-              FATAL PURITY
-            </Text>
-            <Text fz={18} lh={1} c="tintGrey03">
-              Vigo Gallery{' | '}Лондон
-            </Text>
-          </Group>
+        <Stack component="ul" gap={20} style={{ listStyle: 'none' }} p={0}>
+          {allShowsArr?.[0] &&
+            allShowsArr.map((show) => (
+              <Group
+                component="li"
+                key={show.title}
+                gap={40}
+                align="baseline"
+                wrap="nowrap"
+              >
+                <Text fz={20} lh={1} fw={500} w={50} tt="uppercase">
+                  {show.year}
+                </Text>
+                <Text fz={20} lh={1} fw={500} tt="uppercase">
+                  {show.title}
+                </Text>
+                <Text fz={18} lh={1} c="tintGrey03">
+                  {show.place}
+                  {' | '}
+                  {show.city}
+                  {' | '}
+                  {show.country}
+                </Text>
+              </Group>
+            ))}
         </Stack>
       </Stack>
       <Stack gap={40}>
