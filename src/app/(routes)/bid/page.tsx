@@ -1,5 +1,5 @@
-// NOTE: This route is for testing components like widgets
+import { BidPage } from '@/views/bid-page';
 
-export default function TestPage() {
-  return null;
+export default function BidRoute() {
+  return <BidPage />;
 }
