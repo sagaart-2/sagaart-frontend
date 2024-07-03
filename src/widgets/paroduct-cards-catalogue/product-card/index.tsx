@@ -9,18 +9,18 @@ import classes from './classes.module.css';
 export function ProductCard({ ...item }: IProductCard) {
   const artworkInfo = `${item?.category.name}${' | '}
   ${capitalizeWord(item?.style.name)}${' | '}
-  ${item?.genre.name}`;
+  ${item?.genre}`;
   const artworkParameters = `${capitalizeWord(item?.material_tablet)}, ${item?.material_work.toLowerCase()}${' | '}${item?.width}\u00a0x\u00a0${item?.height}\u00a0см`;
 
   return (
     <Stack gap={8} className={classes.card}>
       <Link
-        href={`/product-cards/${item.id}`}
+        href={`/product_cards/${item.id.toString()}`}
         style={{ textDecorationLine: 'none' }}
       >
         <Image
           component={NextImage}
-          src={item?.foto}
+          src={item?.photo}
           alt={item?.title}
           width={301}
           height={360}

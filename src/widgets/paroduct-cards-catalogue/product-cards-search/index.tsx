@@ -6,7 +6,7 @@ import { SearchBarUi } from './search-bar-ui';
 
 export function ProductCardsSearch() {
   return (
-    <Stack gap={36}>
+    <Stack component="form" gap={36}>
       <SearchBarUi />
       <FilterBarUi />
     </Stack>

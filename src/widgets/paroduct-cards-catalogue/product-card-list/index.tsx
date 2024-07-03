@@ -4,10 +4,10 @@ import { ProductCard } from '../product-card';
 import classes from './classes.module.css';
 
 interface IProps {
-  items: IProductCard[];
+  items: IProductCard[] | null;
 }
 
-export function ProductCardsList({ items }: IProps) {
+export async function ProductCardsList({ items }: IProps) {
   return (
     <Grid
       className={classes.grid}

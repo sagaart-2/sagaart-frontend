@@ -1,5 +1,5 @@
 // mock-data.ts
-export const data = [
+export const mockData = [
   { year: '2015', value: 80000 },
   { year: '2016', value: 120000 },
   { year: '2017', value: 180000 },
