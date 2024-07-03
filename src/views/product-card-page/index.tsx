@@ -11,6 +11,7 @@ import {
   Text,
   Badge,
   Avatar,
+  Switch,
 } from '@mantine/core';
 import { CarouselWidget } from '@/widgets/carousel';
 import { OutlineButton, PrimaryButton, SelectInput } from '@/shared/ui';
@@ -29,7 +30,7 @@ interface IProps {
 
 export function ProductCardPage({ item = productCardsList[0] }: IProps) {
   const [selectedChart, setSelectedChart] = useState('BarChart');
-  const [selectedSubscription] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const artworkInfo = `${item?.category.name}${' | '}
     ${capitalizeWord(item?.style.name)}${' | '}
@@ -123,7 +124,7 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
         </Title>
         <Text>{item.description}</Text>
       </Stack>
-      {selectedSubscription === false ? (
+      {isSubscribed === false ? (
         <Stack gap={0}>
           <Text
             ff="Benzin, Helvetica, Arial, sans-serif"
@@ -133,16 +134,28 @@ export function ProductCardPage({ item = productCardsList[0] }: IProps) {
           >
             Рекомендуем оформить подписку
           </Text>
-          <Title
-            mt={20}
-            mb={12}
-            order={1}
-            fz={30}
-            lh={1}
-            ff="Benzin, Helvetica, Arial, sans-serif"
+          <Group
+            gap={32}
+            justify="space-between"
+            align="flex-end"
+            wrap="nowrap"
           >
-            Оформите подписку на анализ стоимости
-          </Title>
+            <Title
+              mt={20}
+              mb={12}
+              order={2}
+              fz={30}
+              lh={1}
+              ff="Benzin, Helvetica, Arial, sans-serif"
+            >
+              Оформите подписку на анализ стоимости
+            </Title>
+            <Switch
+              color="tintGrey01"
+              checked={isSubscribed}
+              onChange={(event) => setIsSubscribed(event.currentTarget.checked)}
+            />
+          </Group>
           <Text
             ff="Benzin, Helvetica, Arial, sans-serif"
             fz={20}
