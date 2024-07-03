@@ -14,6 +14,18 @@ npm ci
 npm run dev
 ```
 
+In the project root create a file **.env.local** with settings:
+
+```
+# Next-auth config
+NEXTAUTH_SECRET=supersecret
+NEXTAUTH_URL=http://localhost:3000
+
+# Axios Config
+NEXT_PUBLIC_BASE_URL=http://localhost:3000/api/
+BACKEND_URL=http://158.160.142.238/api/v1
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## How to contribute
