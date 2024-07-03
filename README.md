@@ -45,7 +45,7 @@ VITE_API_URL=http://localhost:3000/api
 
 ## Design
 
-[Figma Layout](https://www.figma.com/design/u5iyOL3rRXAvv38LujjHOZ/%C2%AB%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0-2%C2%BB-%D0%A5%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%2B-%D0%A1%D0%B0%D0%B0%D0%B3%D0%B0%D1%80%D1%82?node-id=0%3A1&t=zHQXudZWC1i5rPIQ-1)
+[Figma Layout](https://www.figma.com/design/u5iyOL3rRXAvv38LujjHOZ/%C2%AB%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0-2%C2%BB-%D0%A5%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%2B-%D0%A1%D0%B0%D0%B0%D0%B3%D0%B0%D1%80%D1%82?node-id=14-4)
 
 ## Team
 
