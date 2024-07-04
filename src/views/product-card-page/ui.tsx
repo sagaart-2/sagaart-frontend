@@ -283,7 +283,7 @@ export function ProductCardUi({ ...item }: IProductCard) {
               )}
           </Stack>
           <Avatar
-            src={null}
+            src={item.artist.photo}
             alt="фото художника"
             variant="filled"
             radius="50%"
