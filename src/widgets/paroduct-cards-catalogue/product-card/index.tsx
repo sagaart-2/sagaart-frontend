@@ -2,6 +2,7 @@ import Link from 'next/link';
 import NextImage from 'next/image';
 import { Stack, Text, Image, Flex } from '@mantine/core';
 import { FavoriteIcon, ShoppingBagIcon } from '@/shared/ui/icons';
+import { PicturePlaceholder } from '@/shared/ui';
 import { type IProductCard } from '@/shared/types';
 import { capitalizeWord, priceConversion } from '@/shared/utils';
 import classes from './classes.module.css';
@@ -18,14 +19,18 @@ export function ProductCard({ ...item }: IProductCard) {
         href={`/product_cards/${item.id.toString()}`}
         style={{ textDecorationLine: 'none' }}
       >
-        <Image
-          component={NextImage}
-          src={item?.photo}
-          alt={item?.title}
-          width={301}
-          height={360}
-          className={classes.cardImage}
-        />
+        {item.photo ? (
+          <Image
+            component={NextImage}
+            src={item?.photo}
+            alt={item?.title}
+            width={301}
+            height={360}
+            className={classes.cardImage}
+          />
+        ) : (
+          <PicturePlaceholder />
+        )}
       </Link>
       <Stack gap={12}>
         <Flex justify="space-between" align="center">

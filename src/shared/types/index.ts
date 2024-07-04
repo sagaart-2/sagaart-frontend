@@ -7,6 +7,20 @@ export interface IShow {
   country: string;
 }
 
+export interface IWorks {
+  id: number;
+  photo: string;
+  title: string;
+  category: ICategory;
+  style: IStyle;
+  genre: string;
+  width: number;
+  height: number;
+  material_work: string;
+  material_tablet: string;
+  price: string;
+}
+
 export interface IArtist {
   id: number;
   name: string;
@@ -27,6 +41,7 @@ export interface IArtist {
   social: string;
   solo_shows: IShow[];
   group_shows: IShow[];
+  works: IWorks[];
 }
 
 export interface ICategory {

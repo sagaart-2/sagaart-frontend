@@ -1,7 +1,3 @@
-.cardImageWrapper {
-  overflow: hidden;
-}
-
 .cardImage {
   height: 100%;
   object-fit: contain;

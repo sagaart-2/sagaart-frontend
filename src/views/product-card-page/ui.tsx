@@ -5,7 +5,6 @@ import NextImage from 'next/image';
 import Link from 'next/link';
 import { type IProductCard } from '@/shared/types';
 import {
-  Box,
   Group,
   Stack,
   Image,
@@ -14,9 +13,15 @@ import {
   Badge,
   Avatar,
   Switch,
+  Container,
 } from '@mantine/core';
 import { CarouselWidget } from '@/widgets/carousel';
-import { OutlineButton, PrimaryButton, SelectInput } from '@/shared/ui';
+import {
+  OutlineButton,
+  PicturePlaceholder,
+  PrimaryButton,
+  SelectInput,
+} from '@/shared/ui';
 import { getYear, capitalizeWord, priceConversion } from '@/shared/utils';
 import { BarChart, DonutChart, LineChart } from '@mantine/charts';
 import { country, mockData, line } from './lib/mock-data';
@@ -27,10 +32,10 @@ export function ProductCardUi({ ...item }: IProductCard) {
   const [selectedChart, setSelectedChart] = useState('BarChart');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const artworkInfo = `${item?.category.name}${' | '}
-    ${capitalizeWord(item?.style.name)}${' | '}
-    ${item?.genre}`;
-  const artworkParameters = `${capitalizeWord(item?.material_tablet)}, ${item?.material_work.toLowerCase()}${' | '}${item?.width}\u00a0x\u00a0${item?.height}\u00a0см`;
+  const artworkInfo = `${item.category.name}${' | '}
+    ${capitalizeWord(item.style.name)}${' | '}
+    ${item.genre}`;
+  const artworkParameters = `${capitalizeWord(item.material_tablet)}, ${item.material_work.toLowerCase()}${' | '}${item.width}\u00a0x\u00a0${item.height}\u00a0см`;
 
   const soloShowsArr = item.artist.solo_shows;
   const groupShowsArr = item.artist.group_shows;
@@ -39,72 +44,83 @@ export function ProductCardUi({ ...item }: IProductCard) {
   return (
     <Stack gap={88} py={88}>
       <Group gap={28} justify="stretch" align="stretch" wrap="nowrap" grow>
-        <Box className={classes.cardImageWrapper}>
-          <Image
-            component={NextImage}
-            src={item?.photo}
-            alt={item?.title}
-            width={622}
-            height={380}
-            priority
-            className={classes.cardImage}
-          />
-        </Box>
-        <Stack gap={40}>
-          <Stack gap={16}>
-            <Text fz={20} lh={1.15} ff="Benzin, Helvetica, Arial, sans-serif">
-              {item.artist.name} {item.artist.lastname}
+        <Container fluid px={0}>
+          {item.photo ? (
+            <Image
+              component={NextImage}
+              src={item.photo}
+              alt={item.title}
+              width={622}
+              height={400}
+              priority
+              className={classes.cardImage}
+            />
+          ) : (
+            <PicturePlaceholder />
+          )}
+        </Container>
+
+        <Stack gap={24}>
+          <Text fz={20} lh={1.15} ff="Benzin, Helvetica, Arial, sans-serif">
+            {item.artist.name} {item.artist.lastname}
+          </Text>
+
+          <Title order={1} fz={24} lh={1.15} c="tintGrey03">
+            {item.title}
+            {', '} {item.year_create}
+          </Title>
+
+          <Stack gap={4}>
+            <Text fz={16} c="tintGrey03">
+              {artworkInfo}
             </Text>
-            <Title order={1} fz={24} lh={1.15} c="tintGrey03">
-              {item?.title}
-              {', '} {item?.year_create}
-            </Title>
-            <Stack gap={4}>
-              <Text fz={16} c="tintGrey03">
-                {artworkInfo}
-              </Text>
-              <Text fz={16} c="tintGrey03">
-                {artworkParameters}
-              </Text>
-            </Stack>
-            <Group gap={16} align="flex-start" wrap="nowrap">
-              {item.unique && (
-                <Badge
-                  variant="outline"
-                  color="var(--mantine-color-black)"
-                  radius={0}
-                  size="xl"
-                  pb={4}
-                  fw={500}
-                  style={{ textTransform: 'none' }}
-                >
-                  Уникальная работа
-                </Badge>
-              )}
-              {item.investment_attractiveness && (
-                <Badge
-                  variant="outline"
-                  color="var(--mantine-color-black)"
-                  radius={0}
-                  size="xl"
-                  pb={4}
-                  fw={500}
-                  style={{ textTransform: 'none' }}
-                >
-                  Инвестиции в искусство
-                </Badge>
-              )}
-            </Group>
-            <Text
-              fz={20}
-              fw={500}
-              lh={1}
-              ff="Benzin, Helvetica, Arial, sans-serif"
-              py={4}
-            >
-              {priceConversion(item.price)}
-              {'  '}&#8381;
+
+            <Text fz={16} c="tintGrey03">
+              {artworkParameters}
             </Text>
+          </Stack>
+
+          <Group gap={16} align="flex-start" wrap="nowrap" pt={4}>
+            {item.unique && (
+              <Badge
+                variant="outline"
+                color="var(--mantine-color-black)"
+                radius={0}
+                size="xl"
+                pb={4}
+                fw={500}
+                style={{ textTransform: 'none' }}
+              >
+                Уникальная работа
+              </Badge>
+            )}
+            {item.investment_attractiveness && (
+              <Badge
+                variant="outline"
+                color="var(--mantine-color-black)"
+                radius={0}
+                size="xl"
+                pb={4}
+                fw={500}
+                style={{ textTransform: 'none' }}
+              >
+                Инвестиции в искусство
+              </Badge>
+            )}
+          </Group>
+
+          <Text
+            fz={20}
+            fw={500}
+            lh={1}
+            ff="Benzin, Helvetica, Arial, sans-serif"
+            py={4}
+          >
+            {priceConversion(item.price)}
+            {'  '}&#8381;
+          </Text>
+
+          <Stack gap={20}>
             <PrimaryButton>Купить</PrimaryButton>
             <SelectInput
               inputSize="lg"
@@ -117,6 +133,7 @@ export function ProductCardUi({ ...item }: IProductCard) {
           </Stack>
         </Stack>
       </Group>
+
       <Stack gap={40} maw={796}>
         <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
           О работе
@@ -250,9 +267,9 @@ export function ProductCardUi({ ...item }: IProductCard) {
                 {item.artist.name} {item.artist.lastname}
               </Text>
               <Text fz={20} lh={1} c="tintGrey03">
-                {getYear(item?.artist.date_of_birth)}
+                {getYear(item.artist.date_of_birth)}
                 {' | '}
-                {item?.artist.city_of_birth}
+                {item.artist.city_of_birth}
               </Text>
             </Group>
             <Text>{item.artist.bio}</Text>
@@ -266,11 +283,12 @@ export function ProductCardUi({ ...item }: IProductCard) {
               )}
           </Stack>
           <Avatar
-            src={item.artist.photo}
+            src={null}
             alt="фото художника"
             variant="filled"
             radius="50%"
             size={200}
+            bg="tintGrey03"
           />
         </Group>
       </Stack>
@@ -309,7 +327,7 @@ export function ProductCardUi({ ...item }: IProductCard) {
         <Title order={2} ff="Benzin, Helvetica, Arial, sans-serif">
           Другие работы художника
         </Title>
-        <CarouselWidget />
+        {item.artist.works && <CarouselWidget items={item.artist.works} />}
       </Stack>
     </Stack>
   );

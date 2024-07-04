@@ -14,3 +14,4 @@ export { OutlineButton } from './buttons';
 export { PrimaryButton } from './buttons';
 export { SelectInput } from './select-input';
 export { FormModal } from './modals';
+export { PicturePlaceholder } from './picture-placeholder';

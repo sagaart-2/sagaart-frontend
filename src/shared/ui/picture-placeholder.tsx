@@ -1,12 +1,18 @@
 import { Stack } from '@mantine/core';
 
-export function PicturePlace() {
+export function PicturePlaceholder() {
   return (
-    <Stack w={520} h={520} bg="tintGrey01" justify="center" align="center">
+    <Stack
+      w="100%"
+      justify="center"
+      align="center"
+      bg="tintGrey01"
+      style={{ aspectRatio: 1 }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="500"
-        height="500"
+        width="90%"
+        height="90%"
         viewBox="0 0 500 500"
         fill="none"
         stroke="var(--mantine-color-white)"
