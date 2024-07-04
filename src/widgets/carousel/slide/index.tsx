@@ -13,7 +13,7 @@ export function Slide({ ...item }: IWorks) {
   return (
     <Stack gap={8}>
       <Link
-        href={`/product-cards/${item.id}`}
+        href={`/product_cards/${item.id}`}
         style={{ textDecorationLine: 'none' }}
       >
         {item.photo ? (
