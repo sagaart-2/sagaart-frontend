@@ -3,16 +3,7 @@ import { Group } from '@mantine/core';
 
 export function FilterBarUi() {
   return (
-    <Group
-      component="form"
-      maw="100%"
-      h={64}
-      gap={12}
-      p={12}
-      bg="tintGrey02"
-      wrap="nowrap"
-      grow
-    >
+    <Group maw="100%" h={64} gap={12} p={12} bg="tintGrey02" wrap="nowrap" grow>
       <SelectInput
         data={[
           { label: 'до 10 000 \u20BD', value: '10000' },

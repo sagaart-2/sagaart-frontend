@@ -12,7 +12,7 @@ import classes from './classes.module.css';
 const navLinks = [
   {
     name: 'Картины',
-    link: '/product-cards',
+    link: '/product_cards',
   },
   {
     name: 'Выставки',

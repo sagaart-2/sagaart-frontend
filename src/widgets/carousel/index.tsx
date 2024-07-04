@@ -2,11 +2,15 @@
 
 import { Carousel } from '@mantine/carousel';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { IWorks } from '@/shared/types';
 import { Slide } from './slide';
-import { paintingsList } from './lib/mock-paintings-list';
 import classes from './classes.module.css';
 
-export function CarouselWidget({ items = paintingsList }: any) {
+interface IProps {
+  items: IWorks[];
+}
+
+export function CarouselWidget({ items }: IProps) {
   return (
     <Carousel
       loop

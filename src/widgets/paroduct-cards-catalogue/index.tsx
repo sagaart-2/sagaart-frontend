@@ -4,7 +4,7 @@ import { ProductCardsSearch } from './product-cards-search';
 import { ProductCardsList } from './product-card-list';
 
 interface IProps {
-  items: IProductCard[];
+  items: IProductCard[] | null;
 }
 
 export function ProductCardsCatalogue({ items }: IProps) {

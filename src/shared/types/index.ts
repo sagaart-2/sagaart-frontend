@@ -1,21 +1,47 @@
 export interface IShow {
   id: number;
+  year: number;
   title: string;
   place: string;
   city: string;
   country: string;
 }
 
+export interface IWorks {
+  id: number;
+  photo: string;
+  title: string;
+  category: ICategory;
+  style: IStyle;
+  genre: string;
+  width: number;
+  height: number;
+  material_work: string;
+  material_tablet: string;
+  price: string;
+}
+
 export interface IArtist {
   id: number;
-  foto: string;
   name: string;
   lastname: string;
+  photo: string;
   bio: string;
   date_of_birth: string;
+  city_of_birth: string;
   city_of_residence: string;
+  country: string;
+  education: string | null;
+  art_education: string | null;
+  teaching_experience: boolean;
+  personal_style: boolean;
+  collected_by_private_collectors: boolean;
+  collected_by_major_institutions: boolean;
+  industry_award: string;
+  social: string;
   solo_shows: IShow[];
   group_shows: IShow[];
+  works: IWorks[];
 }
 
 export interface ICategory {
@@ -28,19 +54,14 @@ export interface IStyle {
   name: string;
 }
 
-export interface IGenre {
-  id: number;
-  name: string;
-}
-
 export interface IProductCard {
   id: number;
-  foto: string;
+  photo: string;
   artist: IArtist;
   title: string;
   category: ICategory;
   style: IStyle;
-  genre: IGenre;
+  genre: string;
   description: string;
   year_create: string;
   width: number;
@@ -50,6 +71,42 @@ export interface IProductCard {
   unique: boolean;
   investment_attractiveness: boolean;
   price: string;
+  avg_cost_of_work: string;
+}
+
+export interface IBidRequest {
+  category: string;
+  year_create: number;
+  height: number;
+  width: number;
+  material_work: string;
+  material_tablet: string;
+  count_title: number;
+  count_artist: number;
+  country: string;
+  gender: string;
+  solo_shows: string;
+  group_shows: string;
+  age: number;
+  is_alive: boolean;
+  photo: string;
+  title: string;
+  artist_name: string;
+  artist_lastname: string;
+}
+
+export interface IBidResponse {
+  id: number;
+  photo: string;
+  title: string;
+  artist_name: string;
+  artist_lastname: string;
+  category: string;
+  width: number;
+  height: number;
+  material_work: string;
+  material_tablet: string;
+  price: number;
 }
 
 export type ISubscriptionOption = {
