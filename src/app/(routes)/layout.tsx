@@ -2,7 +2,23 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
+<<<<<<< HEAD
+import { MantineProvider, Stack, Container } from '@mantine/core';
+
+import { ModalsProvider } from '@mantine/modals';
+
+import '@mantine/carousel/styles.css';
+import '@mantine/core/styles.layer.css';
+import '@mantine/core/styles/global.css';
+
+import '@/shared/style/globals.css';
+import { theme } from '@/shared/style/theme';
+
+import { Footer } from '@/widgets/footer';
+import { Header } from '@/widgets/header';
+=======
 const inter = Inter({ subsets: ['latin'] });
+>>>>>>> 633497fff76400047a44f79d1955ec70ecc67027
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +31,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+<<<<<<< HEAD
+    <html lang="ru">
+      <body>
+        <MantineProvider theme={theme}>
+          <ModalsProvider>
+            <Container miw={1024} maw={1440} mih="100dvh" mx="auto" p={0}>
+              <Stack gap={0} mih="100%" pos="relative">
+                <Header />
+                <Stack
+                  component="main"
+                  px={{ base: 64, xxl: 88 }}
+                  gap={0}
+                  pos="relative"
+                >
+                  {children}
+                </Stack>
+                <Footer />
+              </Stack>
+            </Container>
+          </ModalsProvider>
+        </MantineProvider>
+      </body>
+=======
     <html lang="en">
       <body className={inter.className}>{children}</body>
+>>>>>>> 633497fff76400047a44f79d1955ec70ecc67027
     </html>
   );
 }

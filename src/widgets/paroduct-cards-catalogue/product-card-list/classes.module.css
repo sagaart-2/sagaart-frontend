@@ -1,0 +1,13 @@
+.grid {
+  width: 100%;
+  margin: 0;
+  columns: 4;
+  gap: 20px;
+}
+
+.gridCol {
+  width: calc(320px + (1440 - 320) * ((100vw - 320px) / (1440 - 320)));
+  max-width: 301px;
+  break-inside: avoid;
+  padding: 0;
+}

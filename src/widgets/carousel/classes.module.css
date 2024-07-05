@@ -1,0 +1,21 @@
+.rootCarousel {
+  min-height: 301px;
+  box-sizing: border-box;
+}
+
+.controlsCarousel {
+  top: -50px;
+  inset-inline-start: 'auto';
+}
+
+.controlCarousel {
+  box-shadow: 'none';
+  border: 'none';
+  color: black;
+  font-size: 24px;
+
+  & svg {
+    font-size: 24px;
+    stroke-width: 2px;
+  }
+}

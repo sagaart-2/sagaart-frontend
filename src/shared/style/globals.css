@@ -1,0 +1,17 @@
+/* stylelint-disable-next-line prettier/prettier */
+
+@import url('../assets/fonts/fonts.css');
+
+:root {
+  font-family: Bahnschrift, Helvetica, Arial, sans-serif;
+
+  --text-fz: 1.125rem;
+  --text-fw: 400;
+  --text-lh: 1.111;
+  --text-color: var(--mantine-color-black);
+  --body-color: var(--mantine-color-white);
+}
+
+ul {
+  margin: 0;
+}
