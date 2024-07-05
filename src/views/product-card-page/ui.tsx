@@ -11,12 +11,12 @@ import {
   Title,
   Text,
   Badge,
-  Avatar,
   Switch,
   Container,
 } from '@mantine/core';
 import { CarouselWidget } from '@/widgets/carousel';
 import {
+  Avatar,
   OutlineButton,
   PicturePlaceholder,
   PrimaryButton,
@@ -283,12 +283,9 @@ export function ProductCardUi({ ...item }: IProductCard) {
               )}
           </Stack>
           <Avatar
-            src={item.artist.photo}
-            alt="фото художника"
-            variant="filled"
-            radius="50%"
-            size={200}
-            bg="tintGrey03"
+            name={item.artist.name}
+            lastname={item.artist.lastname}
+            photo={item.artist.photo}
           />
         </Group>
       </Stack>

@@ -13,5 +13,6 @@ export { ShoppingBagIcon } from './icons';
 export { OutlineButton } from './buttons';
 export { PrimaryButton } from './buttons';
 export { SelectInput } from './select-input';
+export { Avatar } from './avatar';
 export { FormModal } from './modals';
 export { PicturePlaceholder } from './picture-placeholder';
