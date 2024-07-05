@@ -23,8 +23,7 @@ export function UpdatePictureWidget({ onSubmitted }: IUpdatePictureWidget) {
 
     const data = new FormData();
     data.append('photo', picture);
-    console.log(data);
-  }, []);
+  }, [picture]);
 
   const handleDeletePicture = useCallback(() => {
     setPicture(null);
