@@ -40,4 +40,4 @@ More on the project conventions, structure and used tools and packages here: [CO
 
 ## Team
 
-[Olga Milne](https://github.com/helgamilne), [Elizaveta Parada](https://github.com/Elizaveta-Parada)
+[Helga Milne](https://github.com/helgamilne), [Elizaveta Parada](https://github.com/Elizaveta-Parada)
