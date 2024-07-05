@@ -18,7 +18,7 @@ In the project root create a file **.env.local** with settings:
 
 ```
 # Next-auth config
-NEXTAUTH_SECRET=supersecret
+NEXTAUTH_SECRET=yoursecret
 NEXTAUTH_URL=http://localhost:3000
 
 # Axios Config
