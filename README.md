@@ -38,6 +38,8 @@ More on the project conventions, structure and used tools and packages here: [CO
 
 ## Demo
 
+https://sagaart-market.vercel.app/
+
 ## Team
 
 [Helga Milne](https://github.com/helgamilne), [Elizaveta Parada](https://github.com/Elizaveta-Parada)
