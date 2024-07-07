@@ -15,27 +15,7 @@ export function BidForm() {
   const [photoFile, setPhotoFile] = useState<File | null>(null);
   const handleSelectPhotoFile = useCallback(setPhotoFile, [setPhotoFile]);
 
-  const form = useForm<IFormValues>({
-    initialValues: {
-      title: '',
-      year_create: 1900,
-      category: 'Живопись',
-      country: 'Россия',
-      height: 100,
-      width: 100,
-      material_work: 'масло',
-      material_tablet: 'холст',
-      artist_name: 'Илья',
-      artist_lastname: 'Репин',
-      gender: 'male',
-      age: 48,
-      is_alive: true,
-      count_title: 10,
-      count_artist: 25,
-      solo_shows: 'Лабиринты наива, Красное и черное',
-      group_shows: 'Параллели, Иная реальность, Окна',
-    },
-  });
+  const form = useForm<IFormValues>();
 
   const handleSubmit = useCallback(
     async (values: IFormValues) => {

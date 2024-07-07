@@ -12,7 +12,6 @@ export function PicturePlace({ photoFile }: IProps) {
     <Stack
       w={520}
       h={520}
-      bg="tintGrey01"
       justify="center"
       align="center"
       style={{ flexShrink: 0 }}

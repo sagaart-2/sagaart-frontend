@@ -66,7 +66,6 @@ export function BidFormUi({
             ]}
             label="Категория"
             placeholder="Выберите"
-            defaultValue="Живопись"
             allowDeselect
             styles={{ root: { width: '100%', maxWidth: '280px' } }}
             {...form.getInputProps('category')}
