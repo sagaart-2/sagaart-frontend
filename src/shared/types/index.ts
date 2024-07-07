@@ -75,6 +75,7 @@ export interface IProductCard {
 }
 
 export interface IBidRequest {
+  photo: File | null;
   category: string;
   year_create: number;
   height: number;
@@ -89,7 +90,6 @@ export interface IBidRequest {
   group_shows: string;
   age: number;
   is_alive: boolean;
-  photo: string;
   title: string;
   artist_name: string;
   artist_lastname: string;
@@ -98,15 +98,24 @@ export interface IBidRequest {
 export interface IBidResponse {
   id: number;
   photo: string;
+  category: string;
+  year_create: number;
+  height: number;
+  width: number;
+  material_work: string;
+  material_tablet: string;
+  count_title: number;
+  count_artist: number;
+  country: string;
+  gender: string;
+  solo_shows: string;
+  group_shows: string;
+  age: number;
+  is_alive: boolean;
   title: string;
   artist_name: string;
   artist_lastname: string;
-  category: string;
-  width: number;
-  height: number;
-  material_work: string;
-  material_tablet: string;
-  price: number;
+  price: string;
 }
 
 export type ISubscriptionOption = {
