@@ -168,7 +168,7 @@ export function BidFormUi({
               root: { width: '100%', maxWidth: '180px' },
               body: { alignItems: 'flex-end' },
             }}
-            {...form.getInputProps('is_alive')}
+            {...form.getInputProps('is_alive', { type: 'checkbox' })}
           />
         </Group>
 

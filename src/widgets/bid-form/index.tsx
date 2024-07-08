@@ -15,7 +15,27 @@ export function BidForm() {
   const [photoFile, setPhotoFile] = useState<File | null>(null);
   const handleSelectPhotoFile = useCallback(setPhotoFile, [setPhotoFile]);
 
-  const form = useForm<IFormValues>();
+  const form = useForm<IFormValues>({
+    initialValues: {
+      title: '',
+      year_create: 1900,
+      category: '',
+      country: '',
+      height: 100,
+      width: 100,
+      material_work: 'масло',
+      material_tablet: 'холст',
+      artist_name: '',
+      artist_lastname: '',
+      gender: '',
+      age: 30,
+      is_alive: true,
+      count_title: 0,
+      count_artist: 0,
+      solo_shows: '',
+      group_shows: '',
+    },
+  });
 
   const handleSubmit = useCallback(
     async (values: IFormValues) => {
