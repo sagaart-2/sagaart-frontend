@@ -1,14 +1,19 @@
 import { Stack } from '@mantine/core';
-import { PicturePlaceholder } from '@/shared/ui';
 import { UpdatePictureButtonUi } from './update-picture-button-ui';
-import { UpdatePictureModalOpenWidget } from './update-picture-modal-open-widget';
+import { PicturePlace } from './picture-place';
 
-export function PictureWidget() {
+interface IProps {
+  photoFile: File | null;
+  selectPhotoFile: (payload: File | null) => void;
+}
+
+export function PictureWidget({ photoFile, selectPhotoFile }: IProps) {
   return (
     <Stack gap={0} p={0} w={520} h={560}>
-      <PicturePlaceholder />
-      <UpdatePictureModalOpenWidget
-        triggerComponentUi={UpdatePictureButtonUi}
+      <PicturePlace {...{ photoFile }} />
+      <UpdatePictureButtonUi
+        {...{ photoFile }}
+        selectPhotoFile={selectPhotoFile}
       />
     </Stack>
   );

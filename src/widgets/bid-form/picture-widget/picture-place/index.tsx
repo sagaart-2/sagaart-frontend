@@ -1,22 +1,36 @@
-import { Stack } from '@mantine/core';
+import NextImage from 'next/image';
+import { Stack, Image } from '@mantine/core';
+import { PicturePlaceholder } from '@/shared/ui';
+import classes from './classes.module.css';
 
-export function PicturePlace() {
+interface IProps {
+  photoFile: File | null;
+}
+
+export function PicturePlace({ photoFile }: IProps) {
   return (
-    <Stack w={520} h={520} bg="tintGrey01" justify="center" align="center">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="500"
-        height="500"
-        viewBox="0 0 500 500"
-        fill="none"
-        stroke="var(--mantine-color-white)"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <line x1="475" y1="475" x2="25" y2="25" />
-        <line x1="475" y1="25" x2="25" y2="475" />
-      </svg>
+    <Stack
+      w={520}
+      h={520}
+      justify="center"
+      align="center"
+      style={{ flexShrink: 0 }}
+    >
+      {photoFile ? (
+        <Image
+          component={NextImage}
+          src={URL.createObjectURL(photoFile)}
+          alt="фото экспоната"
+          width={520}
+          height={520}
+          className={classes.picture}
+          onLoad={() =>
+            photoFile && URL.revokeObjectURL(URL.createObjectURL(photoFile))
+          }
+        />
+      ) : (
+        <PicturePlaceholder />
+      )}
     </Stack>
   );
 }
