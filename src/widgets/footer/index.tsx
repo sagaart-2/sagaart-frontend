@@ -36,28 +36,28 @@ const navLinks = [
   [
     {
       name: 'Подписка на сервис',
-      link: '#',
+      link: '/subscription',
     },
     {
-      name: 'Оценка картины',
-      link: '#',
+      name: 'Оценить\u00a0картину',
+      link: '/bids',
     },
   ],
   [
     {
-      name: 'Картины',
-      link: '#',
+      name: 'Каталог',
+      link: '/product_cards',
     },
     {
       name: 'Художники',
       link: '#',
     },
     {
-      name: 'Выставки',
+      name: 'Галереи',
       link: '#',
     },
     {
-      name: 'Галереи',
+      name: 'Новости',
       link: '#',
     },
   ],

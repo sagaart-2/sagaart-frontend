@@ -3,7 +3,6 @@ import {
   FavoriteIcon,
   PersonIcon,
   PhoneIcon,
-  SearchIcon,
   ShoppingBagIcon,
 } from '@/shared/ui/icons';
 import { Box, Flex, Group, Stack, Text } from '@mantine/core';
@@ -11,12 +10,8 @@ import classes from './classes.module.css';
 
 const navLinks = [
   {
-    name: 'Картины',
+    name: 'Каталог',
     link: '/product_cards',
-  },
-  {
-    name: 'Выставки',
-    link: '#',
   },
   {
     name: 'Художники',
@@ -27,11 +22,7 @@ const navLinks = [
     link: '#',
   },
   {
-    name: 'Новые\u00a0работы',
-    link: '#',
-  },
-  {
-    name: 'Анализ\u00a0стоимости',
+    name: 'Подписка на сервис',
     link: '/subscription',
   },
   {
@@ -39,27 +30,7 @@ const navLinks = [
     link: '/bids',
   },
   {
-    name: 'Купить',
-    link: '#',
-  },
-  {
-    name: 'Продать',
-    link: '#',
-  },
-  {
-    name: 'БАЗА\u00a0ЦЕН',
-    link: '#',
-  },
-  {
     name: 'Новости',
-    link: '#',
-  },
-  {
-    name: 'О\u00a0НАС',
-    link: '#',
-  },
-  {
-    name: 'Рекомендации',
     link: '#',
   },
 ];
@@ -76,8 +47,8 @@ export function Header() {
     >
       <Group justify="space-between">
         <Group gap={20} miw={204}>
-          <PhoneIcon color="var(--mantine-color-white)" />
-          <Text c="var(--mantine-color-white)" lh="40px">
+          <PhoneIcon color="tintGrey06" />
+          <Text c="tintGrey06" lh="40px">
             {' '}
             +7 945 800 700 200
           </Text>
@@ -94,7 +65,6 @@ export function Header() {
           SAGAART GALLERY
         </Text>
         <Group justify="flex-end" miw={204} gap={12}>
-          <SearchIcon color="var(--mantine-color-white)" mr={28} />
           <FavoriteIcon color="var(--mantine-color-white)" />
           <ShoppingBagIcon color="var(--mantine-color-white)" />
           <PersonIcon color="var(--mantine-color-white)" />
@@ -102,8 +72,8 @@ export function Header() {
       </Group>
       <Flex
         component="ul"
-        justify={{ base: 'center', xxxl: 'space-between' }}
-        columnGap={{ base: 12, xxxl: 6 }}
+        justify={{ base: 'space-between', xl: 'center' }}
+        columnGap={24}
         rowGap={4}
         direction="row"
         maw="100%"
