@@ -50,7 +50,7 @@ export function Header() {
           <PhoneIcon color="tintGrey06" />
           <Text c="tintGrey06" lh="40px">
             {' '}
-            +7 945 800 700 200
+            +7 800 300 70 30
           </Text>
         </Group>
         <Text
@@ -89,7 +89,7 @@ export function Header() {
               component={Link}
               href={link}
               c="var(--mantine-color-white)"
-              fz={16}
+              fz={18}
               lh={1.25}
             >
               {name}

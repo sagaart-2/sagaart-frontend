@@ -9,7 +9,7 @@ export function PrimaryButton({
       size="sm"
       mih={48}
       fz={18}
-      fw={600}
+      fw={400}
       lh={1}
       radius={0}
       fullWidth

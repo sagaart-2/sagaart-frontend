@@ -6,16 +6,6 @@ export function FilterBarUi() {
     <Group maw="100%" h={64} gap={12} p={12} bg="tintGrey02" wrap="nowrap" grow>
       <SelectInput
         data={[
-          { label: 'до 10 000 \u20BD', value: '10000' },
-          { label: 'до 30 000 \u20BD', value: '30000' },
-          { label: 'до 100 000 \u20BD', value: '100000' },
-          { label: 'до 500 000 \u20BD', value: '500000' },
-        ]}
-        placeholder="Цена"
-        styles={{ root: { width: '100%', maxWidth: '194px' } }}
-      />
-      <SelectInput
-        data={[
           { label: 'Графика', value: 'graphic' },
           { label: 'Живопись', value: 'painting' },
           { label: 'Фото', value: 'photo' },
@@ -44,8 +34,18 @@ export function FilterBarUi() {
         placeholder="Размер"
         styles={{ root: { width: '100%', maxWidth: '306px' } }}
       />
+      <SelectInput
+        data={[
+          { label: 'до 10 000 \u20BD', value: '10000' },
+          { label: 'до 30 000 \u20BD', value: '30000' },
+          { label: 'до 100 000 \u20BD', value: '100000' },
+          { label: 'до 500 000 \u20BD', value: '500000' },
+        ]}
+        placeholder="Цена"
+        styles={{ root: { width: '100%', maxWidth: '306px' } }}
+      />
 
-      <PrimaryButton maw={90} mih={40} fz={14} fw={600}>
+      <PrimaryButton maw={90} mih={40} fz={18} fw={600}>
         Найти
       </PrimaryButton>
     </Group>
