@@ -15,11 +15,11 @@ export const selectResolver: PartialVarsResolver<SelectFactory> = (
   if (props.inputSize === 'md') {
     const vars: PartialTransformVars<FactoryPayload['vars']> = {
       root: {
+        fontSize: rem(18),
         '--combobox-option-fz': rem(24),
       },
       wrapper: {},
       input: {
-        '--input-fz': rem(18),
         '--input-bd': 'var(--mantine-color-black)',
         '--input-color': 'var(--mantine-color-black)',
         '--input-border-color': props.error

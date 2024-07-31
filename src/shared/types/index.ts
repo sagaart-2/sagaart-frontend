@@ -125,3 +125,10 @@ export type ISubscriptionOption = {
   description_2: string;
   price: string;
 };
+
+export interface ISearchForm {
+  query: string;
+  category: string;
+  style: string;
+  price: string;
+}

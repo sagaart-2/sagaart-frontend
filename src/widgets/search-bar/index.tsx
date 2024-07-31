@@ -7,12 +7,12 @@ export function SearchBarWidget() {
   return (
     <Group
       component="form"
-      maw={938}
       h={64}
       gap={12}
       p={12}
       bg="tintGrey02"
       wrap="nowrap"
+      grow
     >
       <SelectInput
         data={[
@@ -21,27 +21,28 @@ export function SearchBarWidget() {
           { label: 'Фото', value: 'photo' },
           { label: 'Digital', value: 'digital' },
         ]}
-        placeholder="Картины"
-        styles={{ wrapper: { maxWidth: '194px' } }}
+        placeholder="Категории"
+        styles={{ root: { width: '100%', maxWidth: '306px' } }}
       />
       <SelectInput
         data={[
-          { label: 'Текущие', value: 'current' },
-          { label: 'Ближайшие', value: 'coming' },
-          { label: 'Прошедшие', value: 'past' },
+          { label: 'Футуризм', value: 'futurism' },
+          { label: 'Минимализм', value: 'minimalism' },
+          { label: 'Кубизм', value: 'cubism' },
+          { label: 'Сюрреализм', value: 'surrealism' },
+          { label: 'Арт Деко', value: 'art-deco' },
         ]}
-        placeholder="Выставки"
-        styles={{ wrapper: { maxWidth: '194px' } }}
+        placeholder="Стили"
+        styles={{ root: { width: '100%', maxWidth: '306px' } }}
       />
       <SelectInput
         data={[
-          { label: 'Triumph Gallery', value: 'Triumph Gallery' },
-          { label: 'Fine Art', value: 'Fine Art' },
-          { label: 'Ruarts', value: 'Ruarts' },
-          { label: 'Omelchenko Gallery', value: 'Omelchenko Gallery' },
+          { label: 'Маленький (до 40 см)', value: 'small' },
+          { label: 'Средний (40 – 100 см)', value: 'middle' },
+          { label: 'Большой (более 100 см)', value: 'big' },
         ]}
-        placeholder="Галереи"
-        styles={{ wrapper: { maxWidth: '194px' } }}
+        placeholder="Размер"
+        styles={{ root: { width: '100%', maxWidth: '306px' } }}
       />
       <SelectInput
         data={[
@@ -50,10 +51,11 @@ export function SearchBarWidget() {
           { label: 'до 100 000 \u20BD', value: '100000' },
           { label: 'до 500 000 \u20BD', value: '500000' },
         ]}
-        placeholder="Цена объекта"
-        styles={{ wrapper: { maxWidth: '194px' } }}
+        placeholder="Цена"
+        styles={{ root: { width: '100%', maxWidth: '306px' } }}
       />
-      <PrimaryButton maw={90} mih={40} fz={14} fw={600}>
+
+      <PrimaryButton maw={90} mih={40}>
         Найти
       </PrimaryButton>
     </Group>

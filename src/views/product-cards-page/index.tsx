@@ -1,5 +1,5 @@
 import { IProductCard } from '@/shared/types';
-import { ProductCardsCatalogue } from '@/widgets/paroduct-cards-catalogue';
+import { ProductCardsCatalogue } from '@/widgets/product-cards-catalogue';
 import { Stack, Title } from '@mantine/core';
 
 interface IProps {

@@ -50,7 +50,7 @@ export function HomePage() {
           priority
           className={classes.promoImage}
         />
-        <PrimaryButton w={260} fw={400} style={{ alignSelf: 'flex-end' }}>
+        <PrimaryButton w={260} style={{ alignSelf: 'flex-end' }}>
           Зарегистрироваться
         </PrimaryButton>
 
