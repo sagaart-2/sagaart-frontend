@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 'use client';
 
 import { useCallback, useState } from 'react';
@@ -61,7 +59,7 @@ export function BidForm() {
       if (photoFile) {
         formData.append('photo', photoFile);
       }
-
+      console.log(`значение ${values.is_alive}`);
       const { data, error } = await postBidAction(formData);
       if (error) {
         console.log(error);

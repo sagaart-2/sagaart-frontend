@@ -1,14 +1,12 @@
-.rootNativeSelect {
-  height: 40px;
-  background-color: var(--mantine-color-white);
+.formBar {
+  border: 1px solid var(--mantine-color-white);
 }
 
-.inputNativeSelect {
-  font-size: 16px;
-  color: var(--mantine-color-rangeBlack-1);
+.selectInput {
+  border: 1px solid var(--mantine-color-white);
 }
 
-.inputNativeSelect::placeholder {
-  font-size: 16px;
-  color: var(--mantine-color-rangeGrey-5);
+.selectInputRoot {
+  width: 100%;
+  max-width: 306px;
 }

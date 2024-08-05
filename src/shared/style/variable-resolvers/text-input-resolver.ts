@@ -17,8 +17,6 @@ export const textInputResolver: PartialVarsResolver<TextInputFactory> = (
     root: {},
     wrapper: {},
     input: {
-      '--input-fz': rem(18),
-      '--input-bd': 'var(--mantine-color-black)',
       '--input-color': 'var(--mantine-color-black)',
       '--input-border-color': props.error
         ? 'var(--mantine-color-error)'
@@ -40,7 +38,7 @@ export const textInputResolver: PartialVarsResolver<TextInputFactory> = (
       ...vars.label,
       fontSize: rem(16),
       lineHeight: '1',
-      paddingBottom: rem(9),
+      paddingBottom: rem(8),
     };
   }
 

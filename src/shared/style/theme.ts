@@ -10,6 +10,7 @@ import {
   TextInput,
   Textarea,
   CloseButton,
+  PasswordInput,
 } from '@mantine/core';
 
 import {
@@ -18,6 +19,7 @@ import {
   textInputResolver,
   textAreaResolver,
   closeButtonResolver,
+  passwordInputResolver,
 } from './variable-resolvers';
 
 const breakpoints: MantineBreakpointsValues = {
@@ -125,6 +127,9 @@ export const theme = createTheme({
     }),
     TextInput: TextInput.extend({
       vars: textInputResolver,
+    }),
+    PasswordInput: PasswordInput.extend({
+      vars: passwordInputResolver,
     }),
     Textarea: Textarea.extend({
       vars: textAreaResolver,

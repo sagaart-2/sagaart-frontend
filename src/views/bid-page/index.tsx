@@ -6,7 +6,7 @@ export function BidPage() {
     <Stack gap={53} py={88}>
       <Title
         order={1}
-        fz={34}
+        fz={36}
         lh={1.176}
         ff="Benzin, Helvetica, Arial, sans-serif"
       >

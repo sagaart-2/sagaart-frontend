@@ -7,6 +7,10 @@ interface IProps {
   photoFile: File | null;
 }
 
+interface IProps {
+  photoFile: File | null;
+}
+
 export function PicturePlace({ photoFile }: IProps) {
   return (
     <Stack

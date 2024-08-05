@@ -2,17 +2,20 @@
 
 import { PrimaryButton, SelectInput } from '@/shared/ui';
 import { Group } from '@mantine/core';
+import classes from './classes.module.css';
 
 export function SearchBarWidget() {
   return (
     <Group
       component="form"
+      maw={938}
       h={64}
       gap={12}
-      p={12}
-      bg="tintGrey02"
+      px={14}
+      py={12}
       wrap="nowrap"
       grow
+      className={classes.formBar}
     >
       <SelectInput
         data={[
@@ -22,7 +25,10 @@ export function SearchBarWidget() {
           { label: 'Digital', value: 'digital' },
         ]}
         placeholder="Категории"
-        styles={{ root: { width: '100%', maxWidth: '306px' } }}
+        classNames={{
+          root: classes.selectInputRoot,
+          input: classes.selectInput,
+        }}
       />
       <SelectInput
         data={[
@@ -33,7 +39,10 @@ export function SearchBarWidget() {
           { label: 'Арт Деко', value: 'art-deco' },
         ]}
         placeholder="Стили"
-        styles={{ root: { width: '100%', maxWidth: '306px' } }}
+        classNames={{
+          root: classes.selectInputRoot,
+          input: classes.selectInput,
+        }}
       />
       <SelectInput
         data={[
@@ -42,7 +51,10 @@ export function SearchBarWidget() {
           { label: 'Большой (более 100 см)', value: 'big' },
         ]}
         placeholder="Размер"
-        styles={{ root: { width: '100%', maxWidth: '306px' } }}
+        classNames={{
+          root: classes.selectInputRoot,
+          input: classes.selectInput,
+        }}
       />
       <SelectInput
         data={[
@@ -52,7 +64,10 @@ export function SearchBarWidget() {
           { label: 'до 500 000 \u20BD', value: '500000' },
         ]}
         placeholder="Цена"
-        styles={{ root: { width: '100%', maxWidth: '306px' } }}
+        classNames={{
+          root: classes.selectInputRoot,
+          input: classes.selectInput,
+        }}
       />
 
       <PrimaryButton maw={90} mih={40}>

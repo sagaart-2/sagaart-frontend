@@ -1,8 +1,6 @@
-import { Button, type ButtonProps } from '@mantine/core';
+import { Button } from '@mantine/core';
 
-export function PrimaryButton({
-  ...props
-}: React.ComponentPropsWithoutRef<'button'> & ButtonProps) {
+export function PrimaryButton({ ...props }) {
   return (
     <Button
       variant="filled"

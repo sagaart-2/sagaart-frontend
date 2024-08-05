@@ -43,7 +43,7 @@ export function HomePage() {
       >
         <Image
           component={NextImage}
-          src="/promo_02.png"
+          src="/promo.png"
           alt="галерея"
           sizes="100vw"
           fill
@@ -66,7 +66,7 @@ export function HomePage() {
             w={260}
             c="var(--mantine-color-white)"
             styles={{
-              root: { outline: '1px solid var(--mantine-color-white)' },
+              root: { border: '1px solid var(--mantine-color-white)' },
             }}
           >
             Зарегистрироваться
@@ -77,6 +77,7 @@ export function HomePage() {
           <Stack gap={48}>
             <Title
               order={1}
+              maw={938}
               fz={60}
               lh={1.1}
               c="var(--mantine-color-white)"
