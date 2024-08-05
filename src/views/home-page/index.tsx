@@ -10,7 +10,7 @@ import {
   Image,
   ActionIcon,
 } from '@mantine/core';
-import { PrimaryButton } from '@/shared/ui';
+import { OutlineButton } from '@/shared/ui';
 import { VkIcon, TelegramIcon } from '@/shared/ui/icons';
 import classes from './classes.module.css';
 
@@ -34,25 +34,44 @@ export function HomePage() {
       className={classes.promo}
     >
       <Stack
-        gap={108}
+        gap={90}
         px={{ base: 64, xxl: 88 }}
-        pt={28}
+        pt={46}
         pb={32}
         h="100%"
         className={classes.promoWrapper}
       >
         <Image
           component={NextImage}
-          src="/promo.png"
+          src="/promo_02.png"
           alt="галерея"
           sizes="100vw"
           fill
           priority
           className={classes.promoImage}
         />
-        <PrimaryButton w={260} fw={400} style={{ alignSelf: 'flex-end' }}>
-          Зарегистрироваться
-        </PrimaryButton>
+        <Link
+          href={{
+            pathname: '/auth',
+            query: { view: 'signup' },
+          }}
+          style={{
+            display: 'flex',
+            maxWidth: '938px',
+            textDecoration: 'none',
+            justifyContent: 'flex-end',
+          }}
+        >
+          <OutlineButton
+            w={260}
+            c="var(--mantine-color-white)"
+            styles={{
+              root: { outline: '1px solid var(--mantine-color-white)' },
+            }}
+          >
+            Зарегистрироваться
+          </OutlineButton>
+        </Link>
 
         <Stack justify="space-between" h="100%">
           <Stack gap={48}>

@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+
 import {
   FavoriteIcon,
   PersonIcon,
@@ -36,6 +39,15 @@ const navLinks = [
 ];
 
 export function Header() {
+  const isLogged = true;
+
+  const pathLink = !isLogged
+    ? {
+        pathname: '/auth',
+        query: { view: 'signin' },
+      }
+    : '/customer_profile';
+
   return (
     <Stack
       bg="tintBlack"
@@ -50,7 +62,7 @@ export function Header() {
           <PhoneIcon color="tintGrey06" />
           <Text c="tintGrey06" lh="40px">
             {' '}
-            +7 945 800 700 200
+            +7 999 999 99 99
           </Text>
         </Group>
         <Text
@@ -62,12 +74,14 @@ export function Header() {
           ta="center"
           ff="Benzin, Helvetica, Arial, sans-serif"
         >
-          SAGAART GALLERY
+          SAGAART
         </Text>
         <Group justify="flex-end" miw={204} gap={12}>
           <FavoriteIcon color="var(--mantine-color-white)" />
           <ShoppingBagIcon color="var(--mantine-color-white)" />
-          <PersonIcon color="var(--mantine-color-white)" />
+          <Link href={pathLink}>
+            <PersonIcon color="var(--mantine-color-white)" />
+          </Link>
         </Group>
       </Group>
       <Flex
@@ -89,7 +103,7 @@ export function Header() {
               component={Link}
               href={link}
               c="var(--mantine-color-white)"
-              fz={16}
+              fz={18}
               lh={1.25}
             >
               {name}
