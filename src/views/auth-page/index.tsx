@@ -1,5 +1,10 @@
+import { Suspense } from 'react';
 import { AuthPageUi } from './ui';
 
 export async function AuthPage() {
-  return <AuthPageUi />;
+  return (
+    <Suspense>
+      <AuthPageUi />
+    </Suspense>
+  );
 }
