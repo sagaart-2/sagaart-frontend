@@ -20,7 +20,7 @@ export function SubscriptionPage() {
           mt={32}
           mb={12}
           order={1}
-          fz={48}
+          fz={36}
           lh={1}
           ff="Benzin, Helvetica, Arial, sans-serif"
         >

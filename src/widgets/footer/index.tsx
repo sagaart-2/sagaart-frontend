@@ -8,6 +8,7 @@ import {
   WhatsappIcon,
   YandexZenIcon,
 } from '@/shared/ui/icons';
+import classes from './classes.module.css';
 
 const socialLinks = [
   {
@@ -84,7 +85,13 @@ const navLinks = [
 export function Footer() {
   return (
     <Stack gap={0} justify="flex-end" style={{ flexGrow: 1 }}>
-      <Box bg="tintBlack" px={{ base: 64, xxl: 88 }} py={32} h={320}>
+      <Box
+        h={320}
+        py={32}
+        px={{ base: 64, xxl: 88 }}
+        bg="tintBlack"
+        className={classes.footer}
+      >
         <Stack gap={0} justify="space-between" h="100%">
           <Group
             justify="space-between"
@@ -101,7 +108,7 @@ export function Footer() {
                 c="var(--mantine-color-white)"
                 ff="Benzin, Helvetica, Arial, sans-serif"
               >
-                SAGAART&nbsp;GALLERY
+                SAGAART
               </Text>
               <Group
                 component="ul"
@@ -156,7 +163,7 @@ export function Footer() {
           <Group maw={884} pr={100} justify="space-between">
             <Text c="tintGrey03">&copy; 2024 SAGAART GALLERY</Text>
             <Group>
-              <Text component={Link} href="#" c="tintGrey03">
+              <Text component={Link} href="/auth/agreement" c="tintGrey03">
                 Политика конфиденциальности
               </Text>
               <Text component={Link} href="#" c="tintGrey03">

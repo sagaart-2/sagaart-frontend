@@ -132,3 +132,69 @@ export interface ISearchForm {
   style: string;
   price: string;
 }
+
+export interface ISubcription {
+  id: string;
+  name: string;
+  price: string;
+}
+
+export interface ICart {
+  id: string;
+  name: string;
+  price: string;
+}
+
+export interface IOrder {
+  id: string;
+  name: string;
+  price: string;
+}
+
+export interface IBid {
+  id: string;
+  name: string;
+  price: string;
+}
+
+export interface ICustomer {
+  id: string;
+  name: string;
+  lastname: string | null;
+  email: string;
+  tel: string | null;
+  photo: string | null;
+  subscription: ISubcription | null;
+  cart: ICart | null;
+  orders: IOrder | null;
+  bids: IBid | null;
+}
+
+export interface ICreateUser {
+  name: string;
+  lastname: string | null;
+  email: string;
+  tel: string;
+  password: string;
+}
+
+export interface ICreateGallery {
+  name: string;
+  address: string;
+  email: string;
+  tel: string;
+  password: string;
+}
+
+export interface ICreateUserForm extends ICreateUser {
+  confirmPassword: string;
+}
+
+export interface ICreateGalleryForm extends ICreateGallery {
+  confirmPassword: string;
+}
+
+export interface IUserCredentials {
+  email: string;
+  password: string;
+}

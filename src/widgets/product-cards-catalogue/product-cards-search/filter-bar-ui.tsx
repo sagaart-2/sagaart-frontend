@@ -3,7 +3,7 @@ import { Group } from '@mantine/core';
 
 export function FilterBarUi() {
   return (
-    <Group maw="100%" h={64} gap={12} p={12} bg="tintGrey02" wrap="nowrap" grow>
+    <Group maw="100%" h={64} gap={12} p={12} wrap="nowrap" grow>
       <SelectInput
         data={[
           { label: 'Графика', value: 'graphic' },

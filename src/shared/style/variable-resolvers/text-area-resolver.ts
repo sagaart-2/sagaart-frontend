@@ -19,8 +19,6 @@ export const textAreaResolver: PartialVarsResolver<TextareaFactory> = (
     },
     wrapper: {},
     input: {
-      '--input-fz': rem(18),
-      '--input-bd': 'var(--mantine-color-black)',
       '--input-color': 'var(--mantine-color-black)',
       '--input-border-color': props.error
         ? 'var(--mantine-color-error)'
@@ -42,7 +40,7 @@ export const textAreaResolver: PartialVarsResolver<TextareaFactory> = (
       ...vars.label,
       fontSize: rem(16),
       lineHeight: '1',
-      paddingBottom: rem(9),
+      paddingBottom: rem(8),
     };
   }
 

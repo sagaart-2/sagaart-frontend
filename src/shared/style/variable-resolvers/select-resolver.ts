@@ -14,13 +14,9 @@ export const selectResolver: PartialVarsResolver<SelectFactory> = (
 ) => {
   if (props.inputSize === 'md') {
     const vars: PartialTransformVars<FactoryPayload['vars']> = {
-      root: {
-        fontSize: rem(18),
-        '--combobox-option-fz': rem(24),
-      },
+      root: {},
       wrapper: {},
       input: {
-        '--input-bd': 'var(--mantine-color-black)',
         '--input-color': 'var(--mantine-color-black)',
         '--input-border-color': props.error
           ? 'var(--mantine-color-error)'
@@ -42,7 +38,7 @@ export const selectResolver: PartialVarsResolver<SelectFactory> = (
       ...vars.label,
       fontSize: rem(16),
       lineHeight: '1',
-      paddingBottom: rem(9),
+      paddingBottom: rem(8),
     };
     return vars;
   }

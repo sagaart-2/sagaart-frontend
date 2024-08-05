@@ -16,3 +16,4 @@ export { SelectInput } from './select-input';
 export { Avatar } from './avatar';
 export { FormModal } from './modals';
 export { PicturePlaceholder } from './picture-placeholder';
+export { BackChevronLink } from './back-chevron-link';

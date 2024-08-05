@@ -7,7 +7,7 @@
 
 .inputTextInput {
   padding-left: 12px;
-  border: 1px solid var(--mantine-color-rangeGrey-5);
+  border: 1px solid #ced4da;
   font-size: 18px;
   color: var(--mantine-color-secondaryDynamic-5);
   background-color: transparent;
