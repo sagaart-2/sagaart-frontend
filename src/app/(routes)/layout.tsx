@@ -35,7 +35,7 @@ export default function RootLayout({
         <MantineProvider theme={theme}>
           <ModalsProvider>
             <Container miw={1024} maw={1440} mih="100dvh" mx="auto" p={0}>
-              <Stack gap={0} mih="100%" pos="relative">
+              <Stack gap={0} mih="100dvh" pos="relative">
                 <Header />
                 <Stack
                   component="main"
