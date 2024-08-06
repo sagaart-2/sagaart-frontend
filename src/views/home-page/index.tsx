@@ -1,15 +1,7 @@
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { SearchBarWidget } from '@/widgets/search-bar';
-import {
-  Stack,
-  Group,
-  Box,
-  Title,
-  Text,
-  Image,
-  ActionIcon,
-} from '@mantine/core';
+import { Stack, Group, Box, Title, Image, ActionIcon } from '@mantine/core';
 import { OutlineButton } from '@/shared/ui';
 import { VkIcon, TelegramIcon } from '@/shared/ui/icons';
 import classes from './classes.module.css';
@@ -66,7 +58,7 @@ export function HomePage() {
             w={260}
             c="var(--mantine-color-white)"
             styles={{
-              root: { border: '1px solid var(--mantine-color-white)' },
+              root: { outline: '1px solid var(--mantine-color-white)' },
             }}
           >
             Зарегистрироваться
@@ -88,10 +80,7 @@ export function HomePage() {
             <SearchBarWidget />
           </Stack>
 
-          <Group justify="space-between">
-            <Text fw={700} c="var(--mantine-color-white)">
-              Оптимальный способ оценки стоимости произведения искусства
-            </Text>
+          <Group justify="flex-start" maw={938}>
             <Group
               component="ul"
               gap={20}

@@ -10,7 +10,7 @@ export function ProductCardsSearch() {
   const form = useForm<ISearchForm>();
 
   return (
-    <Stack component="form" gap={36}>
+    <Stack component="form" gap={24}>
       <SearchBarUi form={form} />
       <FilterBarUi />
     </Stack>
