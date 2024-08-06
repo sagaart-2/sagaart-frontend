@@ -76,7 +76,7 @@ export function Header() {
         >
           SAGAART
         </Text>
-        <Group justify="flex-end" miw={204} gap={12}>
+        <Group justify="flex-end" miw={204} gap={12} align="baseline">
           <FavoriteIcon color="var(--mantine-color-white)" />
           <ShoppingBagIcon color="var(--mantine-color-white)" />
           <Link href={pathLink}>
