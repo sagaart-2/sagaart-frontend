@@ -10,7 +10,7 @@ export function ProductCardsPage({ items }: IProps) {
   return (
     <Stack gap={48} py={88}>
       <Title order={1} fz={48} lh={1} ff="Benzin, Helvetica, Arial, sans-serif">
-        Расширенный поиск картин
+        Каталог
       </Title>
       <ProductCardsCatalogue items={items} />
     </Stack>
