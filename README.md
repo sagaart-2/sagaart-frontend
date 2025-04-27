@@ -38,15 +38,19 @@ More on the project conventions, structure and used tools and packages here: [CO
 
 ## Demo
 
- <div>
-  <img  width="50%" src="./public/screenshots/screenshot_01.jpg" alt="screenshot_01" />
- </div>
- <div style="display: flex; flex-direction: row; flex-wrap: nowrap; gap: 24px;">
-  <img  width="50%" src="./public/screenshots/screenshot_02.jpg" alt="screenshot_02" />
-    <img  width="50%" src="./public/screenshots/screenshot_03.jpg" alt="screenshot_03" />
- </div>
-  <div>
-  <img  width="50%" src="./public/screenshots/screenshot_04.jpg" alt="screenshot_04" />
+<div style="
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #333; 
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 40px; 
+">
+  <img  width="70%" src="./public/screenshots/screenshot_01.jpg" alt="screenshot_01" />
+    <img  width="70%" src="./public/screenshots/screenshot_02.jpg" alt="screenshot_02" />
+        <img  width="70%" src="./public/screenshots/screenshot_03.jpg" alt="screenshot_03" />
+          <img  width="70%" src="./public/screenshots/screenshot_04.jpg" alt="screenshot_04" />
  </div>
 
 ## Team
