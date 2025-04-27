@@ -42,13 +42,16 @@ More on the project conventions, structure and used tools and packages here: [CO
 <img  width="70%" src="./public/screenshots/screenshot_01.jpg" alt="screenshot_01" />
 </p>
 <p> </p>
+<p> </p>
 <p align="center">
 <img  width="70%" src="./public/screenshots/screenshot_02.jpg" alt="screenshot_02" />
 </p>
 <p> </p>
+<p> </p>
 <p align="center">
  <img  width="70%" src="./public/screenshots/screenshot_03.jpg" alt="screenshot_03" />
  </p>
+<p> </p>
 <p> </p>
 <p align="center">
  <img  width="70%" src="./public/screenshots/screenshot_04.jpg" alt="screenshot_04" />
