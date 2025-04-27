@@ -38,19 +38,7 @@ More on the project conventions, structure and used tools and packages here: [CO
 
 ## Demo
 
-<style>
-          .image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #333;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            gap: 40px;
-          }    
-        </style>
-
- <div class="image-container">
+ <div style="background-color: #333; padding-top: 50px; padding-bottom: 50px; text-align: center;">
   <img  width="70%" src="./public/screenshots/screenshot_01.jpg" alt="screenshot_01" />
     <img  width="70%" src="./public/screenshots/screenshot_02.jpg" alt="screenshot_02" />
         <img  width="70%" src="./public/screenshots/screenshot_03.jpg" alt="screenshot_03" />
