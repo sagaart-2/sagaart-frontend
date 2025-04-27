@@ -38,7 +38,16 @@ More on the project conventions, structure and used tools and packages here: [CO
 
 ## Demo
 
-https://sagaart-market.vercel.app/
+ <div>
+  <img  width="50%" src="/screenshots/screenshot_01.jpg" alt="screenshot_01" />
+ </div>
+ <div style="display: flex; flex-direction: row; flex-wrap: nowrap; gap: 24px;">
+  <img  width="50%" src="/screenshots/screenshot_02.jpg" alt="screenshot_02" />
+    <img  width="50%" src="/screenshots/screenshot_03.jpg" alt="screenshot_03" />
+ </div>
+  <div>
+  <img  width="50%" src="/screenshots/screenshot_04.jpg" alt="screenshot_04" />
+ </div>
 
 ## Team
 
