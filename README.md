@@ -38,15 +38,29 @@ More on the project conventions, structure and used tools and packages here: [CO
 
 ## Demo
 
- <div style="background-color: #333; text-align: center;">
+<span style="color: red;">
+<p align="center">
 <img  width="70%" src="./public/screenshots/screenshot_01.jpg" alt="screenshot_01" />
+</p>
 
+---
+
+<p align="center">
 <img  width="70%" src="./public/screenshots/screenshot_02.jpg" alt="screenshot_02" />
+</p>
 
+---
+
+<p align="center">
  <img  width="70%" src="./public/screenshots/screenshot_03.jpg" alt="screenshot_03" />
+ </p>
 
+---
+
+<p align="center">
  <img  width="70%" src="./public/screenshots/screenshot_04.jpg" alt="screenshot_04" />
-</div>
+</p>
+</span>
 
 ## Team
 
